@@ -1,2 +1,2 @@
-# tresleches.github.io
+# TRES LECHES
 Team Website
