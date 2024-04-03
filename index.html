@@ -1,55 +1,42 @@
-<!DOCTYPE HTML><html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
-  <script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-  <script type = "text/javascript" src = "index.js"></script>
-  <style>
-    body {
-      min-width: 310px;
-      max-width: 800px;
-      height: 400px;
-      margin: 0 auto;
-    }
-    h2 {
-      font-family: Arial;
-      font-size: 2.5rem;
-      text-align: center;
-    }
-    /* Hide one of the charts Initially */
-    .chart-container {
-        display: none;
-    }
 
-  </style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h2> Team Tres Leches </h2>
-  <div id="chartC-container" class="chart-container">
-    <div id="chart-temperatureC" class="container"></div>
-  </div>
-  <div id="chartF-container" class="chart-container">
-    <div id="chart-temperatureF" class="container"></div>
-  </div>
-  <div id="chart2-container" class="chart-container">
-    <div id="chart-temperature2" class="container"></div>
-  </div>
-
-    <button id = "changeButton" style="background-color: #8d8d8d;" type="button"> Click to change to Fahrenheit </button>
-    <button id = "pinButton" style="background-color: #8d8d8d;" type="button"> Toggle Sensor 1 </button>
-    <button id = "pinButton2" style="background-color: #8d8d8d;" type="button"> Toggle Sensor 2 </button>
-    
-     <form action="/submit" method="post">
-        <input type="text" id="highWarning" name="highWarning" placeholder="Set high warning">
-        <input type="submit" value="Submit">
-    </form>
-
-     <form action="/submit" method="post">
-        <input type="text" id="lowWarning" name="lowWarning" placeholder="Set low warning">
-        <input type="submit" value="Submit">
-    </form>
-    
+  <!-- <h1>Team Tres Leches</h1> -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo">Tres Leches</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="/" class="navbar__links">
+            Home
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a href="/" class="navbar__links">
+            Log In
+          </a>
+        </li>
+        <li class="navbar__btn">
+          <a href="/" class="button">
+            Sign up
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <script src="app.js"></script>
 </body>
 </html>
