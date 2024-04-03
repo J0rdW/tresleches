@@ -1,6 +1,11 @@
 # TRES LECHES
 Team Website
 
+
+
+## Some random stuff from previous project:
+
+
 # Local Chat Room
 
 This local chat room uses Python to communicate between multiple users by using the command prompt.
