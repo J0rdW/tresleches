@@ -1,255 +1,110 @@
-* {
-    box-sizing: border-box;
+*{
     margin: 0;
     padding: 0;
-    font-family: 'Bakersville', sans-serif;
-}
-
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/UofI.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-/* The "about us" text and title at home */
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 60px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 15px;
-}
-/* "About us" hero button (calls to action) */
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 12px 34px;
-    font-size: 20px;
-    background: transparent;
-    position: relative;
-}
-
-/* Signup form */
-.formContainer{
-    width: 100%;
-    min-height: 100vh;
-    background: #292929;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.formContainer h1{
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 40px;
-}
-.signup-box{
-    padding: 35px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 90%;
-    max-width: 800px;
-    background: #fff;
-}
-
-.navbar {
-    background: #131313;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-
-.navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;    
-}
-
-/* since it is an ID, use # instead of .*/
-/* Team name */
-#navbar__logo{
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer; /* hovering */
-    text-decoration: none;
-    font-size: 2rem;
-}
-
-/* some image before team name (may not need) */
-.fa-gem {
-    margin-right: 0.5rem;
-}
-
-.navbar__menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
-}
-
-.navbar__item{
-    height: 80 px;
-}
-
-.navbar__links{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 1rem; /* top bottom, left right */
-    height: 100%;
-    width: 100px;
-}
-
-.navbar__btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    width: 100%
-}
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background: #f77062;
-    color: #fff;
-}
-
-/* color changes when you hover */
-.button:hover{
-    background: #4837ff;
-    transition: all 0.3s ease;
-}
-
-/* color changes when you hover */
-.navbar__links:hover {
-    color: #f77062;
-    transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 960px){
-    .navbar__container {
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0;
-    }
-    .navbar__menu{
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        opacity: 0;
-        transition: all 0.5s ease;
-        height: 50vh;   /* viewport height */
-        z-index: -1;
-        background: #131313;
-    }
-    .navbar__menu.active {/* javascript to trigger */
-        background: #131313;
-        top: 100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 99;
-        height: 50vh;
-        font-size: 1.6rem;
-    }
-    #navbar__logo{
-        padding-left: 25 px;
-    }
-    .navbar__toggle .bar{
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        background: #fff;
-    }
-    .navbar__item{
-        width: 100%;
-    }
-    .navbar__links{
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
-    }
-    #mobile-menu{
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%,20%);
-    }
-    .navbar__btn{
-        padding-bottom: 2rem;
-    }
-
-    .button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-        height: 80px;
-        margin: 0;
-    }
-    .navbar__toggle .bar{
-        display: block;
-        cursor: pointer;
-    }
-    #mobile-menu.is-active .bar:nth-child(2){
-        opacity: 0;
-    }
-    #mobile-menu.is-active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    #mobile-menu.is-active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+ .header{
+     min-height: 100vh;
+     width: 100%;
+     background-image: linear-gradient(rgba(9, 40, 40, 0.7),rgba(9, 40, 40, 0.7)),url(lio.png);
+     
+     background-position: center;
+     background-size: cover;
+     position:static;
+ }
+ nav{
+     display: flex;
+     padding: 2% 6%;
+     justify-content: space-between;
+     align-items: center;
+ }
+ /*
+ nav img{
+     hello
+     width: 150px; //image position
+     background-color: rgb(37, 86, 86);
+ }
+ */
+ .nav-links{
+     flex: 1;
+     text-align: right;
+ }
+ .nav-links ul li{
+     list-style: none;
+     display: inline-block;
+     padding: 8px 12px;
+     position: relative;
+ }
+ .nav-links ul li a{
+     color: aliceblue;
+     text-decoration: none;
+     font-size: 20px;
+ }
+ .nav-links ul li::after{
+     content: '';
+     width: 0%;
+     height: 2px;
+     background: aliceblue;
+     display: block;
+     margin: auto;
+     transition: 0.5s;
+ }
+ .nav-links ul li:hover::after{
+     width: 100%;
+ }
+ .text-box1{
+     width: 90%;
+     color:aliceblue;
+     position:absolute;
+     top: 20%;
+     left:50%;
+     transform: translate(-50%,-50%);
+     text-align: center;
+ }
+ .text-box1 h1{
+     font-size: 80px;
+ }
+ .text-box1 p{
+     margin: 10px 0 40px;
+     font-size: 14px;
+     color: aliceblue;
+ }
+ .text-box2{
+     width: 30%;
+     color:aliceblue;
+     position:absolute;
+     top: 50%;
+     left:15%;
+     transform: translate(-50%,-50%);
+     text-align: center;
+ }
+ .text-box2 h2{
+     font-size: 30px;
+ }
+ .text-box2 p{
+     margin: 10px 0 40px;
+     font-size: 14px;
+     color: aliceblue;
+ }
+ .text-box3{
+     width: 30%;
+     color:aliceblue;
+     position:absolute;
+     top: 50%;
+     right: -15%;
+     transform: translate(-50%,-50%);
+     text-align:center;
+ }
+ .text-box2 h3{
+     font-size: 30px;
+ }
+ .text-box3 p{
+     margin: 10px 0 40px;
+     font-size: 14px;
+     color: aliceblue;
+ }
+ 
+ 
+ 
