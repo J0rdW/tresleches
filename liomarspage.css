@@ -8,7 +8,7 @@
  .header{
      min-height: 100vh;
      width: 100%;
-     background-image: linear-gradient(rgba(9, 40, 40, 0.7),rgba(9, 40, 40, 0.7)),url(images/lio.png);
+     background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
      
      background-position: center;
      background-size: cover;
@@ -38,7 +38,7 @@
      position: relative;
  }
  .nav-links ul li a{
-     color: aliceblue;
+     color: blanchedalmond;
      text-decoration: none;
      font-size: 20px;
  }
@@ -46,7 +46,7 @@
      content: '';
      width: 0%;
      height: 2px;
-     background: aliceblue;
+     background: blanchedalmond;
      display: block;
      margin: auto;
      transition: 0.5s;
@@ -56,7 +56,7 @@
  }
  .text-box1{
      width: 90%;
-     color:aliceblue;
+     color:blanchedalmond;
      position:absolute;
      top: 20%;
      left:50%;
@@ -69,11 +69,11 @@
  .text-box1 p{
      margin: 10px 0 40px;
      font-size: 14px;
-     color: aliceblue;
+     color: blanchedalmond;
  }
  .text-box2{
      width: 30%;
-     color:aliceblue;
+     color:blanchedalmond;
      position:absolute;
      top: 50%;
      left:15%;
@@ -86,11 +86,11 @@
  .text-box2 p{
      margin: 10px 0 40px;
      font-size: 14px;
-     color: aliceblue;
+     color: blanchedalmond;
  }
  .text-box3{
      width: 30%;
-     color:aliceblue;
+     color:blanchedalmond;
      position:absolute;
      top: 50%;
      right: -15%;
@@ -103,7 +103,7 @@
  .text-box3 p{
      margin: 10px 0 40px;
      font-size: 14px;
-     color: aliceblue;
+     color: blanchedalmond;
  }
 /*small screen*/
  @media(max-width: 700px){
@@ -115,10 +115,14 @@
  /*additional info*/
 
  .additional{
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
+    background-image: linear-gradient(rgba(9, 40, 40, 0.7),rgba(9, 40, 40, 0.7)),url(images/lio.png);
+    background-position: center;
+    background-size:auto;
+    position:static;
  }
  h1{
     font-size: 36px;
