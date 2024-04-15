@@ -38,15 +38,15 @@
      position: relative;
  }
  .nav-links ul li a{
-     color: blanchedalmond;
+     color: rgb(255, 255, 255);
      text-decoration: none;
-     font-size: 20px;
+     font-size: 25px;
  }
  .nav-links ul li::after{
      content: '';
      width: 0%;
      height: 2px;
-     background: blanchedalmond;
+     background: rgb(255, 255, 255);
      display: block;
      margin: auto;
      transition: 0.5s;
@@ -72,6 +72,13 @@
      color: blanchedalmond;
  }
  .text-box2{
+    flex-basis: 31%;
+    background: #5c8f78;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    /* stuff */
      width: 30%;
      color:blanchedalmond;
      position:absolute;
@@ -89,6 +96,12 @@
      color: blanchedalmond;
  }
  .text-box3{
+    flex-basis: 31%;
+    background: #5c8f78;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
      width: 30%;
      color:blanchedalmond;
      position:absolute;
@@ -148,3 +161,71 @@
     padding: 20px 12px;
     box-sizing: border-box;
  }
+/*from styles*/
+ .navbar__links{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem; /* top bottom, left right */
+    height: 100%;
+    width: 100px;
+}
+
+.navbar {
+    background: #5c8f78;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position:static;
+    top: 0;
+    z-index: 999;
+}
+
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;    
+}
+
+/* since it is an ID, use # instead of .*/
+/* Team name */
+#navbar__logo{
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* hovering */
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* some image before team name (may not need) */
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item{
+    height: 60 px;
+}
