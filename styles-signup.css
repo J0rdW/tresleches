@@ -28,12 +28,11 @@ body{
     line-height: 100px;
     background: linear-gradient(rgba(39,39,39, 0.9), transparent);
     z-index: 100;
-    justify-content: right;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
-#TresLeches{
-    justify-content: left;
-    text-align: left;
-}
+
 .nav-button .btn{
     width: 130px;
     height: 40px;
@@ -43,26 +42,33 @@ body{
     border-radius: 30px;
     cursor: pointer;
 }
-
-.form-box{
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 512px;
-    height: 420px;
-    overflow: hidden;
-    z-index: 2;
-}
-.nav-logo p{
+.nav-logo {
     color: #fff;
     font-size: 25px;
     font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin: 0;
+    order: 0;
 }
+
+.nav-button{
+    order: 2;
+}
+
+.nav-menu{
+    justify-content: right;
+    order: 1;
+    margin-left: auto;
+    padding: 0px 20px;
+}
+
+
 .nav-menu ul{
     display: flex;
 }
 .nav-menu ul li{
-
     list-style-type: none;
 }
 
@@ -73,6 +79,16 @@ body{
     color: #fff;
     padding-bottom: 15px;
     margin: 0 25px;
+}
+
+.form-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 512px;
+    height: 420px;
+    overflow: hidden;
+    z-index: 2;
 }
 
 /* "Sign Up" */
