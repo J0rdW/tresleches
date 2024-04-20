@@ -1,46 +1,63 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles-signup.css">
+    <title>Tres Leches - Sign Up or Sign In</title>
 </head>
-
 <body>
-  <!-- <h1>Tres Leches</h1> -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="" id="navbar__logo">Log In</a>
-      <div class="navbar__toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__item">
-          <a href="index.html" class="navbar__links">
-            Home
-          </a>
-        </li>
-        <li class="navbar__item">
-          <a href="login.html" class="navbar__links">
-            Log In
-          </a>
-        </li>
-        <li class="navbar__btn">
-          <a href="signup.html" class="button">
-            Sign up
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <script src="app.js"></script>
-  <section class="header">
-    
-  </section>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Tres Leches</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="index.html" class="link active">Home</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+          <a href = "login.html"> <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button> </a>
+            <a href = "signup.html"><button class="btn" id="registerBtn" onclick="register()">Sign Up</button></a>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+      <!-- Form container -->
+        <div class="form-container">
+          <!-- Signup stuff-->
+            <div class="signup-box" id="register">
+              <div class = "top">
+                <span>New? Sign up <a href="signup.html" onclick="login()">here</a></span>
+                <header> Sign In</header>
+              </div>
+              <!-- <div class = "two-forms">
+                <div class = "input-box">
+                  <input type = "text" class="inputs" placeholder="Username">
+                  <i class = "user"> </i>
+                </div>
+                <div class = "input-box">
+                  <input type = "text" class="inputs" placeholder="Password">
+                  <i class = "password"> </i>
+                </div>
+              </div> -->
+              <div class = "input-box">
+                <input type = "text" class="inputs" placeholder="Username">
+                <!-- <i class = "new-user"> </i> -->
+              </div>
+              <div class = "input-box">
+                <input type = "text" class="inputs" placeholder="Password">
+                <!-- <i class = "re-enter"> </i> -->
+              </div>
+              <div class = "input-box">
+                <input type = "submit" class = "submit" value = "Login">
+              </div>
+        </div>
+  </div>
 </body>
 </html>
+

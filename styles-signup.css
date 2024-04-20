@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bakersville', sans-serif;
+}
+
+body{
+    background: url(images/UofI.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: linear-gradient(rgba(4, 9, 30, 0.5),rgba(4, 9, 30, 0.5));
+}
+
+.nav{
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.9), transparent);
+    z-index: 100;
+    justify-content: right;
+}
+#TresLeches{
+    justify-content: left;
+    text-align: left;
+}
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.562);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.form-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 512px;
+    height: 420px;
+    overflow: hidden;
+    z-index: 2;
+}
+.nav-logo p{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+}
+.nav-menu ul{
+    display: flex;
+}
+.nav-menu ul li{
+
+    list-style-type: none;
+}
+
+/* Sign In and Sign Up Links */
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+
+/* "Sign Up" */
+header{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+
+/* Inputs for sign up */
+.inputs{
+    color: #000000;
+    background: rgba(255, 255, 255, 0.65);
+    font-size: 15px;
+    height: 50px;
+    width: 100%;
+    padding: 0 100px 0 30px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* "Have an account?" */
+.top{
+    text-align: center;
+    color: #fff;
+}
+.top span a{
+    color: #fff;
+}
+.submit{
+    color: #000000;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+}

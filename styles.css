@@ -5,6 +5,20 @@
     font-family: 'Bakersville', sans-serif;
 }
 
+body{
+    background: url(images/UofI.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+}
+
 .header{
     min-height: 100vh;
     width: 100%;
@@ -43,16 +57,14 @@
 }
 
 /* Signup form */
-.formContainer{
-    width: 100%;
-    min-height: 100vh;
-    background: #292929;
+.form-container{
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    min-height: 110vh;
+    background: rgba(39, 39, 39, 0.4)
 }
-.formContainer h1{
+.form-container h1{
     color: #fff;
     font-weight: 500;
     margin-bottom: 40px;
