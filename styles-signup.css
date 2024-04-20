@@ -9,6 +9,7 @@ body{
     background: url(images/UofI.jpg);
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .wrapper{
@@ -19,8 +20,16 @@ body{
     background: linear-gradient(rgba(4, 9, 30, 0.5),rgba(4, 9, 30, 0.5));
 }
 
+/* "Sign Up" */
+header{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+
 .nav{
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     width: 100%;
@@ -50,17 +59,18 @@ body{
     justify-content: flex-start;
     margin-left: 20px;
     margin: 0;
-    order: 0;
+    order: 0; /* order 0, 1 ,2 (logo, home, buttons)*/
 }
 
 .nav-button{
     order: 2;
 }
 
+/* buttons */
 .nav-menu{
     justify-content: right;
     order: 1;
-    margin-left: auto;
+    margin-left: auto; /* fixes justification issues */
     padding: 0px 20px;
 }
 
@@ -89,14 +99,6 @@ body{
     height: 420px;
     overflow: hidden;
     z-index: 2;
-}
-
-/* "Sign Up" */
-header{
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-    padding: 10px 0 30px 0;
 }
 
 /* Inputs for sign up */
