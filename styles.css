@@ -78,6 +78,7 @@ body{
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    margin-right: 10px;
 }
 .nav-logo {
     color: #fff;
@@ -86,7 +87,7 @@ body{
     display: flex;
     justify-content: flex-start;
     margin-left: 20px;
-    margin: 0;
+    margin: 25px;
     order: 0; /* order 0, 1 ,2 (logo, home, buttons)*/
 }
 

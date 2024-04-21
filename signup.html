@@ -5,60 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
-    <link rel="stylesheet" href="styles-signup.css">
+    <link rel="stylesheet" href="signup_signin.css">
     <title>Tres Leches - Sign Up or Sign In</title>
+    <script type="module" src="signup.js" defer></script>
 </head>
-<body>
- <div class="wrapper">
-    <nav class="nav">
-        <div class="nav-logo">
-            <p>Tres Leches</p>
-        </div>
-        <div class="nav-menu" id="navMenu">
-            <ul>
-                <li><a href="index.html" class="link active">Home</a></li>
-            </ul>
-        </div>
-        <div class="nav-button">
-            <a href = "login.html"> <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button> </a>
-            <a href = "signup.html"> <button class="btn" id="registerBtn" onclick="register()">Sign Up</button> </a>
-        </div>
-    </nav>
-      <!-- Form container -->
-        <div class="form-container">
-          <!-- Signup stuff-->
-            <div class="signup-box" id="register">
-              <div class = "top">
-                <span>Have an account? <a href="login.html" onclick="login()">Login here</a></span>
-                <header> Sign Up</header>
-              </div>
-              <!-- <div class = "two-forms">
+  <body>
+  <div class="wrapper">
+      <nav class="nav">
+          <div class="nav-logo">
+              <p>Tres Leches</p>
+          </div>
+          <div class="nav-menu" id="navMenu">
+              <ul>
+                  <li><a href="index.html" class="link active">Home</a></li>
+              </ul>
+          </div>
+          <div class="nav-button">
+              <a href = "login.html"> <button class="btn white-btn" id="loginBtn">Sign In</button></a>
+              <a href = "signup.html"> <button class="btn" id="registerBtn">Sign Up</button></a>
+          </div>
+      </nav>
+        <!-- Form container -->
+          <div class="form-container">
+            <!-- Signup stuff-->
+              <div class="signup-box" id="loginthing">
+                <div class = "top">
+                  <span>Have an account? <a href="login.html">Login here</a></span>
+                  <header> Sign Up</header>
+                </div>
+                <!-- <div class = "two-forms">
+                  <div class = "input-box">
+                    <input type = "text" class="inputs" placeholder="Username">
+                    <i class = "user"> </i>
+                  </div>
+                  <div class = "input-box">
+                    <input type = "text" class="inputs" placeholder="Password">
+                    <i class = "password"> </i>
+                  </div>
+                </div> -->
                 <div class = "input-box">
-                  <input type = "text" class="inputs" placeholder="Username">
-                  <i class = "user"> </i>
+                  <input type = "email" class="inputs" placeholder="Email" id="email" required>
+                  <!-- <i class = "new-user"> </i> -->
                 </div>
                 <div class = "input-box">
-                  <input type = "text" class="inputs" placeholder="Password">
-                  <i class = "password"> </i>
+                  <input type = "password" class="inputs" placeholder="Create a password" id="password" required>
+                  <!-- <i class = "new-password"> </i> -->
                 </div>
-              </div> -->
-              <div class = "input-box">
-                <input type = "text" class="inputs" placeholder="Create a username">
-                <!-- <i class = "new-user"> </i> -->
-              </div>
-              <div class = "input-box">
-                <input type = "text" class="inputs" placeholder="Create a password">
-                <!-- <i class = "new-password"> </i> -->
-              </div>
-              <div class = "input-box">
-                <input type = "text" class="inputs" placeholder="Re-enter password">
-                <!-- <i class = "re-enter"> </i> -->
-              </div>
-              <div class = "input-box">
-                <input type = "submit" class = "submit" value = "Register">
-              </div>
-        </div>
-  </div>
-</body>
+                <!-- <div class = "input-box">
+                  <input type = "text" class="inputs" placeholder="Re-enter password">
+                </div> -->
+                <div class = "input-box">
+                  <button id="register" class="loginRegister" type="register">Register</button>
+                </div>
+          </div>
+    </div>
+  </body>
 </html>
 

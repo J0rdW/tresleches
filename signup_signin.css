@@ -49,7 +49,8 @@ header{
     background: rgba(255, 255, 255, 0.562);
     border: none;
     border-radius: 30px;
-    cursor: pointer;
+    cursor: pointer; 
+    margin-right: 10px;
 }
 .nav-logo {
     color: #fff;
@@ -57,8 +58,7 @@ header{
     font-weight: 600;
     display: flex;
     justify-content: flex-start;
-    margin-left: 20px;
-    margin: 0;
+    margin: 25px;
     order: 0; /* order 0, 1 ,2 (logo, home, buttons)*/
 }
 
@@ -73,7 +73,6 @@ header{
     margin-left: auto; /* fixes justification issues */
     padding: 0px 20px;
 }
-
 
 .nav-menu ul{
     display: flex;
@@ -109,6 +108,19 @@ header{
     height: 50px;
     width: 100%;
     padding: 0 100px 0 30px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Login and register buttons */
+.loginRegister{
+    color: #000000;
+    background: rgba(255, 255, 255, 0.65);
+    font-size: 20px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
     border: none;
     border-radius: 10px;
     margin-bottom: 10px;

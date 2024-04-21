@@ -1,47 +1,32 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website</title>
+  <title>Home - Tres Leches</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <!-- <h1>Tres Leches</h1> -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="" id="navbar__logo">Home</a>
-      <div class="navbar__toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__item">
-          <a href="index.html" class="navbar__links">
-            Home
-          </a>
-        </li>
-        <li class="navbar__item">
-          <a href="login.html" class="navbar__links">
-            Log In
-          </a>
-        </li>
-        <li class="navbar__btn">
-          <a href="signup.html" class="button">
-            Sign up
-          </a>
-        </li>
-      </ul>
+  <nav class="nav">
+    <div class="nav-logo">
+        <p>Tres Leches</p>
     </div>
-  </nav>
+    <div class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="index.html" class="link active">Home</a></li>
+        </ul>
+    </div>
+    <div class="nav-button">
+        <a href = "login.html"> <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button></a>
+        <a href = "signup.html"> <button class="btn" id="registerBtn" onclick="register()">Sign Up</button> </a>
+    </div>
+</nav>
   <script src="app.js"></script>
   <section class="header">
     <div class="text-box">
-      <h1>Tres(3) Leches' Team Website</h1>
+      <h1>Tres Leches' Team Website</h1>
       <p>A website for the third and final lab of Senior Design and a portfolio for
         all team members included!
       </p>
