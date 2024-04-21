@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bakersville', sans-serif;
+}
+
+body{
+    background: url(images/UofI.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(4, 9, 30, 0.5),rgba(4, 9, 30, 0.5));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* The "about us" text and title at home */
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 15px;
+}
+
+/* "About us" hero button (calls to action) */
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    margin-right: 15px;
+}
+
+.nav{
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.9), transparent);
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.562);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.nav-logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin: 25px;
+    order: 0; /* order 0, 1 ,2 (logo, home, buttons)*/
+}
+
+.nav-button{
+    order: 2;
+}
+
+/* buttons */
+.nav-menu{
+    justify-content: right;
+    order: 1;
+    margin-left: auto; /* fixes justification issues */
+    padding: 0px 20px;
+}
+
+
+.nav-menu ul{
+    display: flex;
+}
+.nav-menu ul li{
+    list-style-type: none;
+}
+
+/* Sign In and Sign Up Links */
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
