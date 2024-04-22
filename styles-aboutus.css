@@ -1,10 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bakersville', sans-serif;
+}
+
 body{
     margin: 0;
     background-color: #010101;
     color: #eee;
 }
 header{
-    width: 1200px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.9), transparent);
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* width: 1200px;
     max-width: 90%;
     margin: auto;
     display: grid;
@@ -13,13 +31,40 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 100;
+    z-index: 100; */
+}
+
+/* supposed to be the links at top */
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.menu ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 28px;
+    transition: 0.5s;
+}
+.menu ul li:hover::after{
+    width: 100%;
 }
 header .logo{
     font-weight: bold;
-    min-width: 100%;
     order: 0;
+    align-content: left;
     font-size: 30px;
+    padding-left: 100px;
 }
 header .menu{
     padding: 0;
@@ -55,7 +100,8 @@ header .menu{
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(to top, #000 40%, transparent);
+    background-image: linear-gradient(to top, #000 30%, transparent);
+
 
 }
 .slider .list .item .content{
@@ -109,7 +155,7 @@ header .menu{
 .arrows button{
     background-color: #eee5;
     border: none;
-    font-family: monospace;
+    font-family: 'Bakersville', sans-serif;
     width: 40px;
     height: 40px;
     border-radius: 5px;
