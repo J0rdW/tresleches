@@ -4,6 +4,7 @@
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+    overscroll-behavior: none;
  }
  .header{
      min-height: 100vh;

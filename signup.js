@@ -1,12 +1,12 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getDatabase, ref, child, set } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 
 // https://firebase.google.com/docs/web/setup#available-libraries
-
 
 // Your web app's Firebase configuration
 
@@ -33,13 +33,15 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+const auth = getAuth(app);
 const analytics = getAnalytics(app);
+const db = getDatabase();
+
+const userListRef = ref(db, 'Users/');
 
 // Submit button
 const submit = document.getElementById('register');
 submit.addEventListener("click", function (event) {
-    event.preventDefault();
 
     // Inputs
     const email = document.getElementById('email').value;
@@ -47,7 +49,7 @@ submit.addEventListener("click", function (event) {
 
     // Validate input fields
     if (ValidateEmail(email) == false){
-        alert('Inocrrect format for email.');
+        alert('Incorrect format for email.');
         return; // Return if wasn't correct format
     }
     if (ValidatePassword(password) == false){
@@ -58,6 +60,9 @@ submit.addEventListener("click", function (event) {
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed up 
+            set(userListRef, {
+                userID: userCredential.user.uid
+            })
             const user = userCredential.user;
             alert("Creating account...");
             window.location.href="login.html"
@@ -69,6 +74,24 @@ submit.addEventListener("click", function (event) {
         });
 
 })
+
+// Loggin in and logging out
+const loginForm = document.querySelector('register');
+logoutButton.addEventListener('submit', () => {
+
+})
+
+const logoutButton = document.querySelector('logout');
+logoutButton.addEventListener('click', () => {
+    signOut(auth)
+        .then(() => {
+            alert('user signed out');
+        })
+        .catch((error) => {
+            alert(error);
+        })
+})
+
 
 // Function to check possbility of email and password
 function ValidateEmail(email) 

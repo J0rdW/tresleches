@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getDatabase, ref, child, get } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 
@@ -33,8 +34,34 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+const auth = getAuth(app);
+const db = getDatabase()
 const analytics = getAnalytics(app);
+const dbref = ref(db);
+
+const userListRef = ref(db, 'Users/');
+
+// Check if user is logged in
+ auth.onAuthStateChanged(user => {
+    if(user){
+        console.log('You are currently logged IN');
+    }
+});
+
+// Prevent going back to login page if logged in (i think we should, right?)
+ const stopLogin = document.getElementById('login');
+ stopLogin.addEventListener("click", function(event) {
+    event.preventDefault();
+    auth.onAuthStateChanged(user => {
+        if(user){
+            alert('You are already logged in.');
+            window.location.href="index.html";
+        } else{
+            window.location.href="login.html";
+        }
+    });
+ });
+
 
 // Submit button
 const submit = document.getElementById('signin');
@@ -47,10 +74,10 @@ submit.addEventListener("click", function (event) {
 
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Signed in
+            // Signed in and goes back to index.html
             const user = userCredential.user;
             alert("Successfully logged in!");
-            window.location.href="index.html";
+            window.location.href="index.html"
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -58,4 +85,23 @@ submit.addEventListener("click", function (event) {
             alert(errorMessage);
         });
 
-})
+});
+
+ // Logout
+ const logoutLink = document.getElementById('logout');
+ logoutLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    signOut(auth).then(() => {
+        // If signout succesful:
+        auth.onAuthStateChanged(user => {
+            if(!user) {
+                alert('Successfully logged out!');
+                loggedOut = true;
+                window.location.href="index.html";
+            }
+        });
+
+    }).catch((error) => {
+        alert(error);
+    });
+ });

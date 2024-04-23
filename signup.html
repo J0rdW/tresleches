@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
     <link rel="stylesheet" href="signup_signin.css">
-    <title>Tres Leches - Sign Up or Sign In</title>
+    
     <script type="module" src="signup.js" defer></script>
+    <!-- <script src="auth.js"></script> -->
+    <title>Tres Leches - Sign Up or Sign In</title>
 </head>
   <body>
   <div class="wrapper">
@@ -17,6 +19,7 @@
         <ul>
           <li><a href="index.html">Home</li></a>
           <li><a href="members.html">Our Team</li></a>
+          <li><a href="#" id="logout">Log Out</li></a>
           <li><a href="login.html">Log In</li></a>
           <li><a href="signup.html">Sign Up</li></a>
         </ul>
@@ -40,14 +43,16 @@
                     <i class = "password"> </i>
                   </div>
                 </div> -->
-                <div class = "input-box">
-                  <input type = "email" class="inputs" placeholder="Email" id="email" required>
-                  <!-- <i class = "new-user"> </i> -->
-                </div>
-                <div class = "input-box">
-                  <input type = "password" class="inputs" placeholder="Create a password" id="password" required>
-                  <!-- <i class = "new-password"> </i> -->
-                </div>
+                <form id="signup-form">
+                  <div class = "input-box">
+                    <input type = "email" class="inputs" placeholder="name@example.com" id="email" required>
+                    <!-- <i class = "new-user"> </i> -->
+                  </div>
+                  <div class = "input-box">
+                    <input type = "password" class="inputs" placeholder="Create a password" id="password" required>
+                    <!-- <i class = "new-password"> </i> -->
+                  </div>
+                </form>
                 <!-- <div class = "input-box">
                   <input type = "text" class="inputs" placeholder="Re-enter password">
                 </div> -->
