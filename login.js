@@ -61,7 +61,31 @@ const userListRef = ref(db, 'Users/');
         }
     });
  });
-
+/////////////////////////////
+// THIS WAS PUT INTO auth.js
+/////////////////////////////
+//  // Prevent going to any of our members links when logged out
+//  const stopProfile = document.querySelectorAll('.profile');
+//  stopProfile.forEach(stopProfile => {
+//     stopProfile.addEventListener("click", function(event){
+//         auth.onAuthStateChanged(user => {
+//             if(!user){
+//                 window.location.href="login.html?redirected=true";
+//                 alert('You must login first!');
+//             } else{
+//                 // nothing
+//             }
+//         });
+//     });
+//  });
+//  // Redirected to login.html?redirected=true
+//  document.addEventListener("DOMContentLoaded", function() {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const redirected = urlParams.get('redirected');
+//     if(redirected) {
+//         alert('You must login first!');
+//     }
+//  });
 
 // Submit button
 const submit = document.getElementById('signin');
