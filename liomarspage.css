@@ -16,6 +16,7 @@
      position:static;
      justify-content: space-between;
      padding-bottom: 100px;
+     display: none;
  }
  .intro{
     color: blanchedalmond;
@@ -124,6 +125,7 @@
     color: blanchedalmond;
     justify-content: space-between;
     padding-top: auto;
+    display: none;
  }
  .additional-row h1{
     color: blanchedalmond;
