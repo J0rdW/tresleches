@@ -64,7 +64,7 @@ auth.onAuthStateChanged(function (user) {
         document.getElementById("header").style.display = "none";
         document.getElementById("additional").style.display = "none";
         alert('You must log in to view this page!')
-        window.location.replace("/login.html");
+        window.location.replace("/tresleches/login.html");
     } else {
         document.getElementById("header").style.display = "block";
         document.getElementById("additional").style.display = "block";
