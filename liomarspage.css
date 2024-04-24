@@ -7,7 +7,7 @@
     font-style: normal;
     overscroll-behavior: none;
  }
- .header{
+ #header{
      height: 27vh;
      width: 100%;
      background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
@@ -111,7 +111,7 @@
 
  /*additional info*/
 
- .additional{
+ #additional{
     height:auto;
     width: 100%;
     margin: auto;
