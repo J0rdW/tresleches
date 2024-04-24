@@ -102,7 +102,7 @@
  .image{
     border-radius: 100%;
     margin-bottom: 5%;
-    max-width: 25%;
+    width: 18%;
     max-height: 25%;
     position: center;
  }
@@ -162,9 +162,7 @@
     position:static;
     top: 0;
     z-index: 999;
-     ;
 }
-
 
 .navbar_container {
     display: flex;
@@ -175,20 +173,23 @@
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px;
-     ;    
+    padding: 0 20px;   
 }
 
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
+    .image{
+        width: 100px;
+        max-height: 87px;
+    }
     .aboutme{
         font-size: 15px;
     }
     .aboutme h2{
-        font-size: 30px;
+        font-size: 40px;
     }
     .aboutme p{
-        font-size: 8px;
+        font-size: 11px;
     }
 }
 
