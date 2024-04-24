@@ -1,4 +1,5 @@
 *{
+    overscroll-behavior: none;
     margin: 0;
     padding: 0;
     font-family: "Bebas Neue", sans-serif;
@@ -6,11 +7,8 @@
     font-style: normal;
     overscroll-behavior: none;
  }
- .whole{
-    display: none;
- }
- #header{
-     min-height: 100vh;
+ .header{
+     height: 66.67vh;
      width: 100%;
      background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
      background-position: center;
@@ -63,7 +61,7 @@
      width: 90%;
      color:blanchedalmond;
      position:absolute;
-     top: 25.988%;
+     top: 27%;
      left:50%;
      transform: translate(-50%,-50%);
      text-align: center;
@@ -84,7 +82,7 @@
     padding: 1px;
     box-sizing:border-box;
     /* stuff */
-     width: 70%;
+     width: 50%;
      color:blanchedalmond;
      position:absolute;
      top: 40%;
@@ -107,7 +105,7 @@
     margin-bottom: 5%;
     padding: 5px;
     box-sizing: border-box;
-     width: 70%;
+     width: 50%;
      color:blanchedalmond;
      position:absolute;
      top: 70%;
@@ -129,6 +127,21 @@
     .text-box1 h1{
         font-size: 20px;
     }
+    .text-box2 h2{
+        font-size: 20px;
+    }
+    .text-box3 h3{
+        font-size: 20px;
+    }
+    .text-box1 p{
+        font-size: 15px;
+    }
+    .text-box2 p{
+        font-size: 15px;
+    }
+    .text-box3 p{
+        font-size: 15px;
+    }
  }
  .image{
     box-sizing: border-box;
@@ -137,6 +150,7 @@
     width: auto;
     max-height: 20%;
     position: absolute;
+
  }
  
 
@@ -153,13 +167,13 @@
     position:static;
     display: none;
  }
- h1{
+ h3{
     color: blanchedalmond;
-    font-size: 36px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 300;
  }
  p{
-    color: rgb(0, 0, 0);
+    color: blanchedalmond;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
@@ -172,7 +186,7 @@
  }
  .additional-row{
     flex-basis: 31%;
-    background:blanchedalmond;
+    background:rgba(9, 40, 40, 0.9);
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
@@ -245,4 +259,12 @@
 
 .navbar__item{
     height: 60 px;
+}
+
+.div {
+    width:100%;
+    height:66.67vh;
+    background:url('your_image.jpg') no-repeat center center;
+    background-size:cover;
+    overflow:hidden;
 }
