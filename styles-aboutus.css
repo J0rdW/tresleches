@@ -10,6 +10,26 @@ body{
     background-color: #010101;
     color: #eee;
 }
+#logout-message{
+    display: none;
+    background-color: hsl(122, 39%, 49%);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2; /* z-index is the z-plane duh*/
+}
+#signup{
+    display: none;
+}
+#login{
+    display: none;
+}
+#logout{
+    display: none;
+}
 header{
     position: absolute;
     top: 0;

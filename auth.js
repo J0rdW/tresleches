@@ -42,76 +42,84 @@ const dbref = ref(db);
 const userListRef = ref(db, 'Users/');
 const path = window.location.pathname;
 
-// if((path === '/liomarspage.html') || (path === '/abelespage.html') || (path === '/janetspage.html') || (path === '/jordanspage.html')){
-//     document.getElementById("whole").style.display = "none";
-    
-//     auth.onAuthStateChanged(function(user) {
-//         if(!user){
-//             document.getElementById("whole").style.display = "none";
-//             window.location.href="login.html?redirected=true";
-//         } else if(user){
-//             document.getElementById("whole").style.display = "block";
-//         }
-//     });
-// }
+
+// Check if user is logged in
+auth.onAuthStateChanged(user => {
+    if (user) {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('signup').style.display = 'none';
+        document.getElementById('logout').style.display = 'block';
+    } else if (!user) {
+        document.getElementById('login').style.display = 'block';
+        document.getElementById('signup').style.display = 'block';
+        document.getElementById('logout').style.display = 'none';
+    }
+});
 
 // Preventing directly going to profile page when logged out...
-auth.onAuthStateChanged(function(user) {
+auth.onAuthStateChanged(function (user) {
     var profiles = ['/liomarspage.html', '/abelespage.html', '/janetspage.html', '/jordanspage.html'];
     var protectedProfile = profiles.includes(window.location.pathname);
-    if(!user && protectedProfile) {
+    if (!user && protectedProfile) {
+        document.getElementById("header").style.display = "none";
+        document.getElementById("additional").style.display = "none";
+        alert('You must log in to view this page!')
         window.location.replace("/login.html");
-    } else{
+    } else {
         document.getElementById("header").style.display = "block";
         document.getElementById("additional").style.display = "block";
     }
 });
 
- // Logout
- const logoutLink = document.getElementById('logout');
- if(logoutLink){
- logoutLink.addEventListener("click", function(event) {
+// Logout
+const logoutLink = document.getElementById('logout');
+logoutLink.addEventListener("click", function (event) {
     event.preventDefault();
     auth.signOut().then(() => {
         // If signout succesful:
-        window.location.href = "login.html";
+        window.location.href = "index.html?redirected=true";
     }).catch((error) => {
         alert(error);
     });
- });
-}
+    document.getElementById('logout-message').style.display = 'block'; // Display the logout message
+});
 
- // Prevent going back to login page if logged in (i think we should, right?)
- const stopLogin = document.getElementById('login');
- stopLogin.addEventListener("click", function(event) {
-    event.preventDefault();
-    auth.onAuthStateChanged(user => {
-        if(user){
-            alert('You are already logged in.');
-            window.location.href="index.html";
-        } else{
-            window.location.href="login.html";
-        }
-    });
- });
+// Redirected to index.html?redirected=true
+document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirected = urlParams.get('redirected');
+    if (redirected) {
+        document.getElementById('logout-message').style.display = 'block'; // Display the logout message
+    }
+});
 
-  // Prevent going to any of our members links when logged out
-  const stopProfile = document.querySelectorAll('.profile');
-  stopProfile.forEach(stopProfile => {
-     stopProfile.addEventListener("click", function(event){
-         auth.onAuthStateChanged(user => {
-             if(!user){
-                 window.location.href="login.html?redirected=true";
-                 alert('You must login first!');
-             }
-         });
-     });
-  });
-  // Redirected to login.html?redirected=true
-  document.addEventListener("DOMContentLoaded", function() {
-     const urlParams = new URLSearchParams(window.location.search);
-     const redirected = urlParams.get('redirected');
-     if(redirected) {
-         alert('You must login first!');
-     }
-  });
+// Not needed anymore i think
+
+//  // Prevent going back to login page if logged in (i think we should, right?)
+//  const stopLogin = document.getElementById('login');
+//  stopLogin.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     auth.onAuthStateChanged(user => {
+//         if(user){
+//             alert('You are already logged in.');
+//             window.location.href="index.html";
+//         } else{
+//             window.location.href="login.html";
+//         }
+//     });
+//  });
+
+// idk why this isn't needed
+
+//   // Prevent going to any of our members links when logged out
+//   const stopProfile = document.querySelectorAll('.profile');
+//   stopProfile.forEach(stopProfile => {
+//      stopProfile.addEventListener("click", function(event){
+//          auth.onAuthStateChanged(user => {
+//              if(!user){
+//                  window.location.href="login.html?redirected=true";
+//                  alert('You must login first!');
+//              }
+//          });
+//      });
+//   });

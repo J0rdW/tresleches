@@ -11,6 +11,9 @@ body{
     background-attachment: fixed;
     overflow: hidden;
 }
+#logout{
+    display: none;
+}
 
 .wrapper{
     display: flex;

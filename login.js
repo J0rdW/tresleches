@@ -41,7 +41,7 @@ const dbref = ref(db);
 
 const userListRef = ref(db, 'Users/');
 
-// Check if user is logged in
+// Check if user is logged in (just writes to console)
  auth.onAuthStateChanged(user => {
     if(user){
         console.log('You are currently logged IN');
