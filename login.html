@@ -1,46 +1,61 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup_signin.css">
+    <script type="module" src="login.js" defer></script>
+    <title>Tres Leches - Sign Up or Sign In</title>
 </head>
-
-<body>
-  <!-- <h1>Tres Leches</h1> -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="" id="navbar__logo">Log In</a>
-      <div class="navbar__toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+  <body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">Tres Leches</div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Home</li></a>
+          <li><a href="members.html">Our Team</li></a>
+          <li><a href="login.html" id="login">Log In</li></a>
+          <li><a href="signup.html" id="signup">Sign Up</li></a>
+          <li><a href="#" id="logout">Log Out</li></a>
+        </ul>
       </div>
-      <ul class="navbar__menu">
-        <li class="navbar__item">
-          <a href="" class="navbar__links">
-            Home
-          </a>
-        </li>
-        <li class="navbar__item">
-          <a href="login.html" class="navbar__links">
-            Log In
-          </a>
-        </li>
-        <li class="navbar__btn">
-          <a href="signup.html" class="button">
-            Sign up
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <script src="app.js"></script>
-  <section class="header">
-    
-  </section>
-</body>
+    </header>
+        <!-- Form container -->
+          <div class="form-container">
+            <!-- Signup stuff-->
+              <div class="signup-box" id="register">
+                <div class = "top">
+                  <span>New? Sign up <a href="signup.html">here</a></span>
+                  <div id="title"> Sign In</div>
+                </div>
+                <!-- <div class = "two-forms">
+                  <div class = "input-box">
+                    <input type = "text" class="inputs" placeholder="Username">
+                    <i class = "user"> </i>
+                  </div>
+                  <div class = "input-box">
+                    <input type = "text" class="inputs" placeholder="Password">
+                    <i class = "password"> </i>
+                  </div>
+                </div> -->
+                <div class = "input-box">
+                  <input type = "email" class="inputs" placeholder="Email" id="email" required>
+                  <!-- <i class = "new-user"> </i> -->
+                </div>
+                <div class = "input-box">
+                  <input type = "password" class="inputs" placeholder="Password" id="password" required>
+                  <!-- <i class = "new-password"> </i> -->
+                </div>
+                <!-- <div class = "input-box">
+                  <input type = "text" class="inputs" placeholder="Re-enter password">
+                </div> -->
+                <div class = "input-box">
+                  <button id="signin" class="loginRegister" type="signin">Log In</button>
+                </div>
+              </div>
+          </div>
+    </body>
 </html>
+
