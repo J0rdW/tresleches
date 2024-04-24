@@ -42,58 +42,35 @@ const dbref = ref(db);
 const userListRef = ref(db, 'Users/');
 
 // Check if user is logged in (just writes to console)
- auth.onAuthStateChanged(user => {
-    if(user){
+auth.onAuthStateChanged(user => {
+    if (user) {
         console.log('You are currently logged IN');
     }
 });
 
 // Prevent going back to login page if logged in (i think we should, right?)
- const stopLogin = document.getElementById('login');
- stopLogin.addEventListener("click", function(event) {
+const stopLogin = document.getElementById('login');
+stopLogin.addEventListener("click", function (event) {
     event.preventDefault();
     auth.onAuthStateChanged(user => {
-        if(user){
+        if (user) {
             alert('You are already logged in.');
-            window.location.href="index.html";
-        } else{
-            window.location.href="login.html";
+            window.location.href = "index.html";
+        } else {
+            window.location.href = "login.html";
         }
     });
- });
-/////////////////////////////
-// THIS WAS PUT INTO auth.js
-/////////////////////////////
-//  // Prevent going to any of our members links when logged out
-//  const stopProfile = document.querySelectorAll('.profile');
-//  stopProfile.forEach(stopProfile => {
-//     stopProfile.addEventListener("click", function(event){
-//         auth.onAuthStateChanged(user => {
-//             if(!user){
-//                 window.location.href="login.html?redirected=true";
-//                 alert('You must login first!');
-//             } else{
-//                 // nothing
-//             }
-//         });
-//     });
-//  });
-//  // Redirected to login.html?redirected=true
-//  document.addEventListener("DOMContentLoaded", function() {
-//     const urlParams = new URLSearchParams(window.location.search);
-//     const redirected = urlParams.get('redirected');
-//     if(redirected) {
-//         alert('You must login first!');
-//     }
-//  });
+});
 
-// Submit button
+
+// Log in button
 const submit = document.getElementById('signin');
 submit.addEventListener("click", function (event) {
     event.preventDefault();
 
     // Inputs
-    const email = document.getElementById('email').value;
+    const emailInput = document.getElementById('email').value;
+    const email = emailInput+'@gmail.com';
     const password = document.getElementById('password').value;
 
     signInWithEmailAndPassword(auth, email, password)
@@ -111,21 +88,22 @@ submit.addEventListener("click", function (event) {
 
 });
 
- // Logout
- const logoutLink = document.getElementById('logout');
- logoutLink.addEventListener("click", function(event) {
+
+// Logout
+const logoutLink = document.getElementById('logout');
+logoutLink.addEventListener("click", function (event) {
     event.preventDefault();
     signOut(auth).then(() => {
         // If signout succesful:
         auth.onAuthStateChanged(user => {
-            if(!user) {
+            if (!user) {
                 alert('Successfully logged out!');
                 loggedOut = true;
-                window.location.href="index.html";
+                window.location.href = "index.html";
             }
         });
 
     }).catch((error) => {
         alert(error);
     });
- });
+});

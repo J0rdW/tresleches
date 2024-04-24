@@ -42,14 +42,14 @@ const userListRef = ref(db, 'Users/');
 // Submit button
 const submit = document.getElementById('register');
 submit.addEventListener("click", function (event) {
-
     // Inputs
-    const email = document.getElementById('email').value;
+    const emailInput = document.getElementById('email').value;
+    const email = emailInput+'@gmail.com';
     const password = document.getElementById('password').value;
 
     // Validate input fields
-    if (ValidateEmail(email) == false){
-        alert('Incorrect format for email.');
+    if (ValidateEmail(emailInput) == false){
+        alert('Incorrect format for username!');
         return; // Return if wasn't correct format
     }
     if (ValidatePassword(password) == false){
@@ -59,18 +59,24 @@ submit.addEventListener("click", function (event) {
 
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Signed up 
-            set(userListRef, {
-                userID: userCredential.user.uid
-            })
-            const user = userCredential.user;
-            alert("Creating account...");
-            window.location.href="login.html"
+            // // Signed up, now adding to firebase realtime database
+            // const userRef = child(userListRef, userCredential.user.uid);    // Goes under Users -> UID
+            // set(userRef, {
+            //     username: username,
+            //     email: email
+            // })
+            // .then(() => {
+            //     //alert("Account created successfully!");
+            //     window.location.href="index.html";
+            // })
+            // .catch((error) => {
+            //     alert(error.message);
+            // })
+            alert('Successfully signed up!')
+            window.location.href="index.html";
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert(errorMessage)
+            alert(error.message)
         });
 
 })
@@ -94,9 +100,12 @@ logoutButton.addEventListener('click', () => {
 
 
 // Function to check possbility of email and password
-function ValidateEmail(email) 
+function ValidateEmail(emailInput) 
 {
-    var expression = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+    //var expression = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+    var expression = /^[a-zA-Z0-9]+$/.test(emailInput);
+
+
  if (expression)
   {
     return (true)
