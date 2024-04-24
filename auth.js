@@ -58,7 +58,7 @@ auth.onAuthStateChanged(user => {
 
 // Preventing directly going to profile page when logged out...
 auth.onAuthStateChanged(function (user) {
-    var profiles = ['/liomarspage.html', '/abelespage.html', '/janetspage.html', '/jordanspage.html'];
+    var profiles = ['/tresleches/liomarspage.html', '/tresleches/abelespage.html', '/tresleches/janetspage.html', '/tresleches/jordanspage.html'];
     var protectedProfile = profiles.includes(window.location.pathname);
     if (!user && protectedProfile) {
         document.getElementById("header").style.display = "none";
