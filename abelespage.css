@@ -7,14 +7,18 @@
     font-style: normal;
     overscroll-behavior: none;
  }
- .header{
+ .commentbox{
+    display: block;
+ }
+ #header{
+    display: none;
      height: 120vh;
      width: 100%;
      background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/abelespagebackground.jpg);
      background-position: center;
      background-size: cover;
      position:static;
-     display: none;
+     
  }
  .navbar{
      display: flex;
