@@ -21,7 +21,36 @@
      background-position: center;
      background-size: cover;
      position:static;
+     justify-content: space-between;
+     padding-bottom: 100px;
  }
+.intro{}
+.aboutme{}
+
+.nav-links ul li{
+     list-style: none;
+     display:inline-block;
+     padding: 8px 12px;
+     position: relative;
+ }
+ .nav-links ul li a{
+     color: blanchedalmond;
+     text-decoration: none;
+     font-size: 25px;
+ }
+ .nav-links ul li::after{
+     content: '';
+     width: 0%;
+     height: 2px;
+     background: blanchedalmond;
+     display: block;
+     margin: auto;
+     transition: 0.5s;
+ }
+ .nav-links ul li:hover::after{
+     width: 100%;
+ }
+
 header{
     position: absolute;
     top: 0;
@@ -58,12 +87,7 @@ header{
     text-align: center;
     color: #fff;
  } 
-.navbar{
-     display: flex;
-     padding: 2% 6%;
-     justify-content: space-between;
-     align-items: center;
-        }
+
 /* links at the top */
 .menu ul li{
     list-style: none;
@@ -156,78 +180,7 @@ background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614
 */ 
 
  
-
-/*from styles*/
- .navbar__links{
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 1rem; /* top bottom, left right */
-    height: 100%;
-    width: 100px;
-}
-
-.navbar {
-    background: #5c8f78;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position:static;
-    top: 0;
-    z-index: 999;
-}
-
-
-.navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;    
-}
-
-/* since it is an ID, use # instead of .*/
-/* Team name */
-#navbar__logo{
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer; /* hovering */
-    text-decoration: none;
-    font-size: 2rem;
-}
-
-/* some image before team name (may not need) */
-.fa-gem {
-    margin-right: 0.5rem;
-}
-
-.navbar__menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
-}
-
-.navbar__item{
-    height: 60 px;
-}
-
-.div {
-    width:100%;
+   width:100%;
     height:66.67vh;
     background:url('your_image.jpg') no-repeat center center;
     background-size:cover;
