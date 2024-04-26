@@ -7,6 +7,9 @@
     font-style: normal;
     overscroll-behavior: none;
  }
+ #blocking{
+    display: none;
+ }
  #header{
      height: 27vh;
      width: 100%;

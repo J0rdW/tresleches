@@ -10,6 +10,7 @@
  }
  /* change to none to prevent logged out users froms viewing */
  #blocking{
+    display: none;
  }
  .jordan{
     position: absolute;
