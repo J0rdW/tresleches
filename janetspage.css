@@ -24,8 +24,26 @@
      justify-content: space-between;
      padding-bottom: 100px;
  }
-.intro{}
-.aboutme{}
+.intro{
+    color: blanchedalmond;
+    text-align: center;
+    font-size: larger;
+    transform: translateY(100%);
+    border-radius: 50%;
+    }
+.aboutme{
+    color: blanchedalmond;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100vh;
+    background-image: linear-gradient(rgba(9, 40, 40, 0.7),rgba(9, 40, 40, 0.7)),url(images/lio.png);
+    background-position: center;
+    background-size:cover;
+    position: sticky;
+    justify-content: space-between;}
 .aboutme h2{
     color: blanchedalmond;
     max-height: 50%;
@@ -76,138 +94,3 @@
      width: 100%;
  }
 
-header{
-    position: absolute;
-    top: 0;
-    display: flex;
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    background: linear-gradient(rgba(39,39,39, 0.9), transparent);
-    z-index: 100;
-    justify-content: space-between;
-    align-items: center; 
-}
-.text-box1{
-    text-align: center;
-    color: #fff;
- }
- .text-box1 h1{
-    text-align: center;
-    color: #fff;
-    padding: 30px;
-    font-size: 50px;
- }
- .text-box2{
-    text-align: center;
-    color: #fff;
-    padding: 30px;
- }
- 
- .text-box2 h2{
-    padding: 20px;
-    font-size: 25px;
- }
- .text-box3{
-    text-align: center;
-    color: #fff;
- } 
-
-/* links at the top */
-.menu ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-    font-size: 15px;
-}
-.menu ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-}
-.menu ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #ffffff;
-    position: absolute;
-    left: 0;
-    bottom: 28px;
-    transition: 0.5s;
-}
-.menu ul li:hover::after{
-    width: 100%;
-}
-header .logo{
-    font-weight: bold;
-    order: 0;
-    align-content: left;
-    font-size: 30px;
-    padding-left: 100px;
-    color: #fff;
-}
-header .menu{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    font-weight: 500;
-}
-  
-
- /* for commont box */ 
- .commentbox{
-position: 90%;
-background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614));
-
- }
-
- 
-/*small screen*/
- @media(max-width: 700px){
-    .text-box1 h1{
-        font-size: 20px;
-    }
-    .text-box2 h2{
-        font-size: 20px;
-    }
-    .text-box3 h3{
-        font-size: 20px;
-    }
-    .text-box1 p{
-        font-size: 15px;
-    }
-    .text-box2 p{
-        font-size: 15px;
-    }
-    .text-box3 p{
-        font-size: 15px;
-    }
- }
-
- /* image of Abele -- might use this code for myself */ 
-
- .image{
-    box-sizing: border-box;
-    border-radius: 0%;
-    margin-bottom: 5%;
-    width: auto;
-    top: 27%;
-    left: 70%;
-    max-height: 33%;
-    position: absolute;
-
- }
-
-*/ 
-
- 
-   width:100%;
-    height:66.67vh;
-    background:url('your_image.jpg') no-repeat center center;
-    background-size:cover;
-    overflow:hidden;
-}
