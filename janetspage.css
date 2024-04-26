@@ -4,7 +4,9 @@
     padding: 0;
   @font-face {
     font-family: "Stainger Font Family", light-italic;
-    src: url('fonts/Din Studio - Stainger Light Italic.otf) format('opentype');
+
+    src: url('fonts/Din Studio - Stainger Light Italic.otf') format('opentype');
+
   }
     font-weight: 400;
     font-style: normal;
@@ -20,7 +22,8 @@
     display: none;
      height: 120vh;
      width: 100%;
-     background-image: linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%)
+
+     background-image: url('images/IMG_6821.jpeg'), linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%);
      background-position: center;
      background-size: cover;
      position:static;
@@ -72,78 +75,37 @@ position: 90%;
 background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614));
 
  }
- .text-box1{
-    flex-basis: 31%;
-    background: #5c8f78;
-    border-radius: 5px;
-    margin-bottom: 5%;
-    padding: 1px;
-    box-sizing:border-box;
-    /* stuff */
-     width: 30%;
-     color:blanchedalmond;
-     position:absolute;
-     top: 40%;
-     left:25%;
-     transform: translate(-50%,-50%);
-     text-align:center;
+/* removing the textboxes */
+ /*.text-box1{
+    
  }
  .text-box1 h1{
-     font-size: 30px;
+     
  }
  .text-box1 p{
-     margin: 0px 0 100px;
-     font-size: 20px;
-     color: blanchedalmond;
+     
  }
  .text-box2{
-    flex-basis: 31%;
-    background: #5c8f78;
-    border-radius: 5px;
-    margin-bottom: 5%;
-    padding: 1px;
-    box-sizing:border-box;
-    /* stuff */
-     width: 30%;
-     color:blanchedalmond;
-     position:absolute;
-     top: 80%;
-     left:25%;
-     transform: translate(-50%,-50%);
-     text-align:center;
+   
  }
  .text-box2 h2{
-     font-size: 25px;
+     
  }
  .text-box2 p{
-    margin: 0px 0 100px;
-    font-size: 20px;
-    color: blanchedalmond;
+    
  }
  .text-box3{
-    flex-basis: 31%;
-    background: #5c8f78;
-    border-radius: 5px;
-    margin-bottom: 5%;
-    padding: 5px;
-    box-sizing: border-box;
-     width: 30%;
-     color:blanchedalmond;
-     position:absolute;
-     top: 80%;
-     left: 75%;
-     transform: translate(-50%,-50%);
-     text-align:center;
+   
      /* display: flexbox; */
  }
  .text-box2 h3{
-     font-size: 30px;
+    
  }
  .text-box3 p{
-    margin: 0px 0 100px;
-     font-size: 20px;
-     color: blanchedalmond;
- }
+   
+     
+ } */
+
 /*small screen*/
  @media(max-width: 700px){
     .text-box1 h1{
@@ -165,7 +127,9 @@ background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614
         font-size: 15px;
     }
  }
- /* image of Abele */ 
+
+ /* image of Abele -- might use this code for myself */ 
+
  .image{
     box-sizing: border-box;
     border-radius: 0%;
@@ -177,6 +141,9 @@ background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614
     position: absolute;
 
  }
+
+*/ 
+
  
 
 /*from styles*/
