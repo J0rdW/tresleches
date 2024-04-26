@@ -2,58 +2,86 @@
     overscroll-behavior: none;
     margin: 0;
     padding: 0;
+    
   @font-face {
     font-family: "Stainger Font Family", light-italic;
-
     src: url('fonts/Din Studio - Stainger Light Italic.otf') format('opentype');
-
-  }
+             }
     font-weight: 400;
     font-style: normal;
     overscroll-behavior: none;
   }
- .commentbox{
-    display: block;
- }
+ 
  #blocking{
     display: none;
  }
- #header{
-    display: none;
-     height: 120vh;
-     width: 100%;
 
-     background-image: url('images/IMG_6821.jpeg'), linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%);
+ #header{
+     min-height: 100vh;
+     width: 100%;
+     background-image: linear-gradient(beige 25% #ffffff 25%, #ffffff 100%),url(25, 31, 49, 0.614)),url(images/UofI.jpg);
      background-position: center;
      background-size: cover;
      position:static;
-     
- }
- .navbar{
      display: flex;
-     padding: 2% 6%;
      justify-content: space-between;
-     align-items: center;
+     padding-bottom: 100px;
  }
- /*
- nav img{
-     hello
-     width: 150px; //image position
-     background-color: rgb(37, 86, 86);
+
+.intro{
+    color: black;
+    text-align: center;
+    font-size: larger;
+    transform: translateY(100%);
+    border-radius: 50%;
+    }
+
+.aboutme{
+    color: black;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100vh;
+    background-image: linear-gradient(rgba(9, 40, 40, 0.7),rgba(9, 40, 40, 0.7)),url(images/IMG_6821.jpeg);
+    background-position: center;
+    background-size:cover;
+    position: sticky;
+    justify-content: space-between;
+}
+
+.aboutme h2{
+    color: blanchedalmond;
+    max-height: 50%;
+    font-size: 70px;
+    font-weight: 50;
  }
- */
- .nav-links{
-     flex: 1;
-     text-align:end;
+ .aboutme p{
+    color: black;
+    font-size: 20px;
+    font-weight: 50;
+    transform: translateY(10%);
+    transform: translateX(50%);
+    justify-content: space-between;
+    flex-basis: 31%;
+    background:rgba(9, 40, 40, 0.9);
+    border-radius: 10px;
+    margin-bottom: 0%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    width: 50%;
  }
- .nav-links ul li{
+.nav-links ul li{
      list-style: none;
      display:inline-block;
      padding: 8px 12px;
      position: relative;
  }
  .nav-links ul li a{
-     color: blanchedalmond;
+     color: black;
      text-decoration: none;
      font-size: 25px;
  }
@@ -61,7 +89,7 @@
      content: '';
      width: 0%;
      height: 2px;
-     background: blanchedalmond;
+     background: black;
      display: block;
      margin: auto;
      transition: 0.5s;
@@ -69,156 +97,4 @@
  .nav-links ul li:hover::after{
      width: 100%;
  }
- /* for commont box */ 
- .commentbox{
-position: 90%;
-background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614));
 
- }
-/* removing the textboxes */
- /*.text-box1{
-    
- }
- .text-box1 h1{
-     
- }
- .text-box1 p{
-     
- }
- .text-box2{
-   
- }
- .text-box2 h2{
-     
- }
- .text-box2 p{
-    
- }
- .text-box3{
-   
-     /* display: flexbox; */
- }
- .text-box2 h3{
-    
- }
- .text-box3 p{
-   
-     
- } */
-
-/*small screen*/
- @media(max-width: 700px){
-    .text-box1 h1{
-        font-size: 20px;
-    }
-    .text-box2 h2{
-        font-size: 20px;
-    }
-    .text-box3 h3{
-        font-size: 20px;
-    }
-    .text-box1 p{
-        font-size: 15px;
-    }
-    .text-box2 p{
-        font-size: 15px;
-    }
-    .text-box3 p{
-        font-size: 15px;
-    }
- }
-
- /* image of Abele -- might use this code for myself */ 
-
- .image{
-    box-sizing: border-box;
-    border-radius: 0%;
-    margin-bottom: 5%;
-    width: auto;
-    top: 27%;
-    left: 70%;
-    max-height: 33%;
-    position: absolute;
-
- }
-
-*/ 
-
- 
-
-/*from styles*/
- .navbar__links{
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 1rem; /* top bottom, left right */
-    height: 100%;
-    width: 100px;
-}
-
-.navbar {
-    background: #5c8f78;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position:static;
-    top: 0;
-    z-index: 999;
-}
-
-
-.navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;    
-}
-
-/* since it is an ID, use # instead of .*/
-/* Team name */
-#navbar__logo{
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer; /* hovering */
-    text-decoration: none;
-    font-size: 2rem;
-}
-
-/* some image before team name (may not need) */
-.fa-gem {
-    margin-right: 0.5rem;
-}
-
-.navbar__menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
-}
-
-.navbar__item{
-    height: 60 px;
-}
-
-.div {
-    width:100%;
-    height:66.67vh;
-    background:url('your_image.jpg') no-repeat center center;
-    background-size:cover;
-    overflow:hidden;
-}
