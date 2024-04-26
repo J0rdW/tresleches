@@ -37,11 +37,12 @@
 }
 /* supposed to be the links at top */
 .menu ul li{
+    font-family: 'Bakersville', sans-serif;
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
-    font-size: 30px;
+    font-size: 20px;
 }
 .menu ul li a{
     text-decoration: none;
@@ -62,10 +63,11 @@
     width: 100%;
 }
 header .logo{
+    font-family: 'Bakersville', sans-serif;
     font-weight: bold;
     order: 0;
     align-content: left;
-    font-size: 20px;
+    font-size: 30px;
     padding-left: 100px;
     color: #fff;
 }
