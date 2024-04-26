@@ -355,7 +355,7 @@ header .menu{
 a {
     color:blanchedalmond;
 }
-
+/* */
 @media screen and (max-width: 1000px) {
     .menu ul li {
         margin: 0 10px;
