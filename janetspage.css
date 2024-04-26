@@ -108,33 +108,7 @@ header .menu{
     font-weight: 500;
 }
   
- .nav-links{
-     flex: 1;
-     text-align:end;
- }
- .nav-links ul li{
-     list-style: none;
-     display:inline-block;
-     padding: 8px 12px;
-     position: relative;
- }
- .nav-links ul li a{
-     color: blanchedalmond;
-     text-decoration: none;
-     font-size: 25px;
- }
- .nav-links ul li::after{
-     content: '';
-     width: 0%;
-     height: 2px;
-     background: blanchedalmond;
-     display: block;
-     margin: auto;
-     transition: 0.5s;
- }
- .nav-links ul li:hover::after{
-     width: 100%;
- }
+
  /* for commont box */ 
  .commentbox{
 position: 90%;
