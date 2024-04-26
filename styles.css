@@ -88,7 +88,6 @@ header{
     z-index: 100;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 /* supposed to be the links at top */
 .menu ul li{
