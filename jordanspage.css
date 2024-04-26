@@ -1,195 +1,235 @@
-*{
-    overscroll-behavior: none;
-    margin: 0;
-    padding: 0;
-    font-family: 'Bakersville', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    overscroll-behavior: none;
-    
- }
- /* change to none to prevent logged out users froms viewing */
- #blocking{
-    display: none;
- }
- body{
+* {
+   overscroll-behavior: none;
+   margin: 0;
+   padding: 0;
+   font-family: 'Bakersville', sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   overscroll-behavior: none;
+
+}
+
+/* change to none to prevent logged out users froms viewing */
+#blocking {
+   display: none;
+}
+
+body {
    overflow-x: hidden;
- }
- .jordan{
-    position: absolute;
-    top: 15%;
-    left: 25%; 
- }
- .img-breaker{
-    width: 200px;
-    height: 300px;
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 10%;
- }
- .img-solenoid{
-    width: 200px;
-    height: 180px;
-    padding: 20px;
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
- }
- .commentbox{
-    background-color:azure;
- }
- #header{
-     height: 140vh;
-     width: 100%;
-     background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
-     background-position: center;
-     background-size: cover;
-     position:static;
-     justify-content: space-between;
-     padding-bottom: 100px;
- }
- header{
-    position: absolute;
-    top: 0;
-    display: flex;
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    background: linear-gradient(rgba(39,39,39, 0.9), transparent);
-    z-index: 100;
-    justify-content: space-between;
-    align-items: center;
 }
- .text-box1{
-    text-align: center;
-    color: #fff;
- }
- .text-box1 h1{
-    text-align: center;
-    color: #fff;
-    padding: 30px;
-    font-size: 50px;
- }
- .text-box2{
-    text-align: center;
-    color: #fff;
-    padding: 30px;
- }
- 
- .text-box2 h2{
-    padding: 20px;
-    font-size: 35px;
- }
- .text-box3{
-    flex-basis: 31%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
-    border-radius: 5px;
-    margin-bottom: 20%;
-    padding: 5px;
-    box-sizing: border-box;
-     width: 75%;
-     height: 100%;
-     color: #fff;
-     position:absolute;
-     bottom: -190%;
-     left: -5%;
-     transform: translate(-50%,-50%);
-     text-align: center;
-     /* display: flexbox; */
- }
- .text-box3 h3{
-    font-size: 25px;
-    text-align: center;
-    padding: 10px;
- }
- .text-box3 p{
-    font-size: 15px;
-    bottom: 10%;
-    text-align: left;
-    padding: 10px;
-    line-height: 2;
- }
- .text-box4{
-    flex-basis: 31%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
-    border-radius: 5px;
-    margin-bottom: 20%;
-    padding: 5px;
-    box-sizing: border-box;
-     width: 75%;
-     height: 100%;
-     color: #fff;
-     position:absolute;
-     bottom: -190%;
-     transform: translate(-50%,-50%);
-     text-align: center;
-     right: -80%;
-     /* display: flexbox; */
- }
- .text-box4 h4{
-    font-size: 25px;
-    text-align: center;
- }
- .text-box4 p{
-    font-size: 15px;
-    bottom: 10%;
-    text-align: center;
-    padding: 10px;
- }
- 
- .pfp{
-    display: flex; /* Helps center */
-    justify-content: center;
-    align-items: center;
- }
- .pfp img{
-    border-radius: 100%;
-    width: 200px;
-    padding: 20px;
- } 
- /* supposed to be the links at top */
-.menu ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-    font-size: 15px;
+
+.jordan {
+   position: absolute;
+   height: 140vh;
+   width: 100%;
+   top: 20%;
 }
-.menu ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
+
+.img-breaker {
+   width: 200px;
+   height: 300px;
+   padding: 20px;
+   position: absolute;
+   bottom: 0;
+   left: 10%;
 }
-.menu ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #ffffff;
+
+.img-solenoid {
+   width: 200px;
+   height: 180px;
+   padding: 20px;
+   position: absolute;
+   bottom: 10%;
+   right: 10%;
+}
+.img-cs2 {
+   width: 200px;
+   position: absolute;
+   bottom: 25%;
+   left: 35%;
+}
+
+.commentbox {
+   background-color: azure;
+}
+
+#header {
+   height: 140vh;
+   width: 100%;
+   background-image: linear-gradient(rgba(25, 31, 49, 0.614), rgba(25, 31, 49, 0.614)), url(images/UofI.jpg);
+   background-position: center;
+   background-size: cover;
+   position: static;
+   justify-content: space-between;
+   padding-bottom: 100px;
+}
+
+header {
+   position: absolute;
+   top: 0;
+   display: flex;
+   width: 100%;
+   height: 100px;
+   line-height: 100px;
+   background: linear-gradient(rgba(39, 39, 39, 0.9), transparent);
+   z-index: 100;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.text-box1 {
+   text-align: center;
+   color: #fff;
+}
+
+.text-box1 h1 {
+   text-align: center;
+   color: #fff;
+   padding: 30px;
+   font-size: 50px;
+
+}
+
+.text-box2 {
     position: absolute;
-    left: 0;
-    bottom: 28px;
-    transition: 0.5s;
-}
-.menu ul li:hover::after{
-    width: 100%;
-}
-header .logo{
-    font-weight: bold;
-    order: 0;
-    align-content: left;
-    font-size: 30px;
-    padding-left: 100px;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     color: #fff;
 }
 
 
-@media (max-width: 700px) {
-   .text-box1 {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
+.text-box2 h2 {
+   padding: 20px;
+   font-size: 35px;
+}
+
+.text-box3 {
+   flex-basis: 31%;
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+   border-radius: 5px;
+   margin-bottom: 20%;
+   padding: 5px;
+   box-sizing: border-box;
+   width: 35%;
+   height: 60%;
+   position: absolute;
+   top: 100%;
+   transform: translate(10%, -20%);
+   text-align: center;
+   color: #fff;
+}
+
+.text-box3 h3 {
+   font-size: 25px;
+   text-align: center;
+   padding: 10px;
+}
+
+.text-box3 p {
+   font-size: 15px;
+   bottom: 10%;
+   text-align: left;
+   padding: 10px;
+   line-height: 2;
+}
+
+.text-box4 {
+   flex-basis: 31%;
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+   border-radius: 5px;
+   margin-bottom: 20%;
+   padding: 5px;
+   box-sizing: border-box;
+   width: 35%;
+   height: 60%;
+   position: absolute;
+   top: 100%;
+   transform: translate(170%, -20%);
+   text-align: center;
+   color: #fff;
+}
+
+.text-box4 h4 {
+   font-size: 25px;
+   text-align: center;
+}
+
+.text-box4 p {
+   font-size: 15px;
+   bottom: 10%;
+   text-align: center;
+   padding: 10px;
+   line-height: 2;
+}
+
+.pfp {
+   display: flex;
+   /* Helps center */
+   justify-content: center;
+   align-items: center;
+   padding: auto;
+}
+.pfp img {
+   position: relative;
+   border-radius: 100%;
+   width: 200px;
+   align-content: center;
+   padding: auto;
+}
+
+/* supposed to be the links at top */
+.menu ul li {
+   list-style: none;
+   display: inline-block;
+   margin: 0 20px;
+   position: relative;
+   font-size: 15px;
+}
+
+.menu ul li a {
+   text-decoration: none;
+   color: #fff;
+   text-transform: uppercase;
+}
+
+.menu ul li::after {
+   content: '';
+   height: 3px;
+   width: 0;
+   background: #ffffff;
+   position: absolute;
+   left: 0;
+   bottom: 28px;
+   transition: 0.5s;
+}
+
+.menu ul li:hover::after {
+   width: 100%;
+}
+
+header .logo {
+   font-weight: bold;
+   order: 0;
+   align-content: left;
+   font-size: 30px;
+   padding-left: 100px;
+   color: #fff;
+}
+
+
+@media (max-width: 1300px) {
+   .text-box3 .img-breaker{
+      width: 100px;
+      height: 180px;
    }
- }
- 
+   .text-box3 .img-solenoid{
+      width: 100px;
+      height: 100px;
+   }
+   .text-box4 .img-cs2{
+      width: 100px;
+
+   }
+}
