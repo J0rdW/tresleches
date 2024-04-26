@@ -17,8 +17,27 @@
     top: 15%;
     left: 25%; 
  }
+ .img-breaker{
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+ }
+ .img-solenoid{
+    width: 200px;
+    height: 180px;
+    padding: 20px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+ }
+ .commentbox{
+    background-color:azure;
+ }
  #header{
-     height: 90vh;
+     height: 140vh;
      width: 100%;
      background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
      background-position: center;
@@ -26,7 +45,6 @@
      position:static;
      justify-content: space-between;
      padding-bottom: 100px;
-     display: none;
  }
  header{
     position: absolute;
@@ -58,11 +76,63 @@
  
  .text-box2 h2{
     padding: 20px;
-    font-size: 25px;
+    font-size: 35px;
  }
  .text-box3{
+    flex-basis: 31%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+    border-radius: 5px;
+    margin-bottom: 20%;
+    padding: 5px;
+    box-sizing: border-box;
+     width: 75%;
+     height: 100%;
+     color: #fff;
+     position:absolute;
+     bottom: -190%;
+     left: -5%;
+     transform: translate(-50%,-50%);
+     text-align: center;
+     /* display: flexbox; */
+ }
+ .text-box3 h3{
+    font-size: 25px;
     text-align: center;
-    color: #fff;
+    padding: 10px;
+ }
+ .text-box3 p{
+    font-size: 15px;
+    bottom: 10%;
+    text-align: left;
+    padding: 10px;
+    line-height: 2;
+ }
+ .text-box4{
+    flex-basis: 31%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+    border-radius: 5px;
+    margin-bottom: 20%;
+    padding: 5px;
+    box-sizing: border-box;
+     width: 75%;
+     height: 100%;
+     color: #fff;
+     position:absolute;
+     bottom: -190%;
+     transform: translate(-50%,-50%);
+     text-align: center;
+     right: -80%;
+     /* display: flexbox; */
+ }
+ .text-box4 h4{
+    font-size: 25px;
+    text-align: center;
+ }
+ .text-box4 p{
+    font-size: 15px;
+    bottom: 10%;
+    text-align: center;
+    padding: 10px;
  }
  .pfp{
     display: flex; /* Helps center */
