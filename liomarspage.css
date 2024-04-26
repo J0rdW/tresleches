@@ -356,5 +356,21 @@ a {
     color:blanchedalmond;
 }
 
+@media screen and (max-width: 1000px) {
+    .menu ul li {
+        margin: 0 10px;
+        font-size: 11px;
+        transform: translateY(40%);
+    }
+    header .logo {
+        text-align: left;
+        font-size: 16px;
+        transform: translateY(40%);
+    }
+}
+.form-container{
+    display: none;
+}
+
 
 
