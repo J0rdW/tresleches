@@ -32,8 +32,8 @@
     width: 100%;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 100vh;
+    padding-top: 150px;
+    padding-bottom: 400px;
     background-image: linear-gradient(rgba(9, 40, 40, 0.7),rgba(9, 40, 40, 0.7)),url(images/lio.png);
     background-position: center;
     background-size:cover;
@@ -294,7 +294,6 @@ header{
     z-index: 100;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 /* supposed to be the links at top */
 .menu ul li{
@@ -340,6 +339,9 @@ header .menu{
 }
 #blocking{
     display: none;
+}
+a {
+    color:blanchedalmond;
 }
 
 
