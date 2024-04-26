@@ -10,6 +10,7 @@
     font-weight: 400;
     font-style: normal;
     overscroll-behavior: none;
+    
   }
  
  #blocking{
@@ -118,11 +119,12 @@
 }
 /* supposed to be the links at top */
 .menu ul li{
+    font-family: 'Bakersville', sans-serif;
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
-    font-size: 30px;
+    font-size: 20px;
 }
 .menu ul li a{
     text-decoration: none;
@@ -145,8 +147,9 @@
 header .logo{
     font-weight: bold;
     order: 0;
+    font-family: 'Bakersville', sans-serif;
     align-content: left;
-    font-size: 20px;
+    font-size: 30px;
     padding-left: 100px;
     color: #fff;
 }
