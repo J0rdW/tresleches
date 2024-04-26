@@ -301,6 +301,7 @@ header{
     display: inline-block;
     margin: 0 20px;
     position: relative;
+    font-size: 15px;
 }
 .menu ul li a{
     text-decoration: none;
