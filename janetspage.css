@@ -19,15 +19,13 @@
     display: none;
  }
  #header{
-    display: none;
-     height: 120vh;
+     min-height: 100vh;
      width: 100%;
-
-     background-image: url('images/IMG_6821.jpeg'), linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%);
+     background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
+     
      background-position: center;
      background-size: cover;
      position:static;
-     
  }
  .navbar{
      display: flex;
