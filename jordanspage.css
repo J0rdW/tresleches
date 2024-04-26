@@ -1,0 +1,246 @@
+*{
+    overscroll-behavior: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bakersville', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overscroll-behavior: none;
+    
+ }
+ /* change to none to prevent logged out users froms viewing */
+ #blocking{
+    display: none;
+ }
+ .jordan{
+    position: absolute;
+    top: 15%;
+    left: 25%; 
+ }
+ #header{
+     height: 90vh;
+     width: 100%;
+     background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
+     background-position: center;
+     background-size: cover;
+     position:static;
+     justify-content: space-between;
+     padding-bottom: 100px;
+     display: none;
+ }
+ header{
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.9), transparent);
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+}
+ .text-box1{
+    text-align: center;
+    color: #fff;
+ }
+ .text-box1 h1{
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+    font-size: 50px;
+ }
+ .text-box2{
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+ }
+ 
+ .text-box2 h2{
+    padding: 20px;
+    font-size: 25px;
+ }
+ .text-box3{
+    text-align: center;
+    color: #fff;
+ }
+ .pfp{
+    display: flex; /* Helps center */
+    justify-content: center;
+    align-items: center;
+ }
+ .pfp img{
+    border-radius: 100%;
+    width: 200px;
+    padding: 20px;
+ } 
+ /* supposed to be the links at top */
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-size: 15px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.menu ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 28px;
+    transition: 0.5s;
+}
+.menu ul li:hover::after{
+    width: 100%;
+}
+header .logo{
+    font-weight: bold;
+    order: 0;
+    align-content: left;
+    font-size: 30px;
+    padding-left: 100px;
+    color: #fff;
+}
+header .menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-weight: 500;
+}
+ 
+ /*additional info*/
+ #additional{
+    height:auto;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #5c8f78;
+    background-position: center;
+    background-size:auto;
+    position:static;
+    color: blanchedalmond;
+    justify-content: space-between;
+    padding-top: auto;
+    display: none;
+ }
+ .additional-row h1{
+    color: blanchedalmond;
+    font-size: 20px;
+    font-weight: 300;
+ }
+ .additional-row p{
+    color: blanchedalmond;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    
+ }
+ .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .additional-row{
+    flex-basis: 31%;
+    background:rgba(9, 40, 40, 0.9);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+ }
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .image{
+        width: 100px;
+        max-height: 87px;
+    }
+    .aboutme{
+        font-size: 15px;
+    }
+    .aboutme h2{
+        font-size: 40px;
+    }
+    .aboutme p{
+        font-size: 11px;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .aboutme{
+        font-size: 15px;
+    }
+    .aboutme h2{
+        font-size: 40px;
+    }
+    .aboutme p{
+        font-size: 20px;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .aboutme{
+        font-size: 15px;
+    }
+    .aboutme h2{
+        font-size: 45px;
+    }
+    .aboutme p{
+        font-size: 25px;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .aboutme{
+        font-size: 15px;
+    }
+    .aboutme h2{
+        font-size: 50px;
+    }
+    .aboutme p{
+        font-size: 30px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .aboutme{
+        font-size: 15px;
+    }
+    .aboutme h2{
+        font-size: 55px;
+    }
+    .aboutme p{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .preview{
+        justify-content: start;
+    }
+    .slider .list .item .content h2{
+        font-size: 60px;
+    }
+    .arrows{
+        top: 10%;
+    }
+}
+
+
