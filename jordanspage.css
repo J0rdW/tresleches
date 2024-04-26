@@ -81,6 +81,9 @@ header {
    text-align: center;
    color: #fff;
 }
+.text-box1 p1{
+   font-size: 20px;
+}
 
 .text-box1 h1 {
    text-align: center;
@@ -230,6 +233,30 @@ header .logo {
    }
    .text-box4 .img-cs2{
       width: 100px;
+
+   }
+}
+@media (max-height: 900px) {
+   .text-box3 .img-breaker{
+      width: 120px;
+      height: 200px;
+   }
+   .text-box3 .img-solenoid{
+      width: 140px;
+      height: 140px;
+   }
+   .text-box4 .img-cs2{
+      width: 200px;
+
+   }
+}
+@media (max-height: 750px) {
+   .text-box3 .img-breaker{
+      width: 90px;
+      height: 150px;
+   }
+   .text-box4 .img-cs2{
+      width: 160px;
 
    }
 }
