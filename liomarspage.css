@@ -7,6 +7,7 @@
     font-weight: 400;
     font-style: normal;
     overscroll-behavior: none;
+    font-family: 'Bakersville', sans-serif;
  }
  #header{
      height: 15vh;
@@ -39,6 +40,7 @@
     background-size:cover;
     position: sticky;
     justify-content: space-between;
+    font-family: "Bebas Neue", sans-serif;
     
  }
  .aboutme h2{
@@ -48,6 +50,7 @@
     font-weight: 50;
     position: sticky;
     justify-content: space-between;
+    font-family: "Bebas Neue", sans-serif;
  }
  .aboutme p{
     color: blanchedalmond;
@@ -126,11 +129,10 @@
     color: blanchedalmond;
     justify-content: space-between;
     padding-top: auto;
+    font-family: "Bebas Neue", sans-serif;
  }
- .additional-row h1{
-    color: blanchedalmond;
-    font-size: 20px;
-    font-weight: 300;
+ #additional h1{
+    font-family: "Bebas Neue", sans-serif;
  }
  .additional-row p{
     color: blanchedalmond;
@@ -138,9 +140,16 @@
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
-    font-family: "Raleway", sans-serif;
-    
+    font-family: "Raleway", sans-serif;  
  }
+
+ .additional-row h1{
+    color: blanchedalmond;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Bebas Neue", sans-serif;
+ }
+ 
  .row{
     margin-top: 5%;
     display: flex;
@@ -302,6 +311,8 @@ header{
     margin: 0 20px;
     position: relative;
     font-size: 15px;
+    font-family: 'Bakersville', sans-serif;
+    
 }
 .menu ul li a{
     text-decoration: none;
