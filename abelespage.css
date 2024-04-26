@@ -41,7 +41,7 @@
     display: inline-block;
     margin: 0 20px;
     position: relative;
-    font-size: 15px;
+    font-size: 30px;
 }
 .menu ul li a{
     text-decoration: none;
@@ -65,7 +65,7 @@ header .logo{
     font-weight: bold;
     order: 0;
     align-content: left;
-    font-size: 30px;
+    font-size: 20px;
     padding-left: 100px;
     color: #fff;
 }
@@ -153,13 +153,13 @@ background-image: linear-gradient(#5c8f78,#5c8f78 );
     background: #5c8f78;
     border-radius: 5px;
     margin-bottom: 5%;
-    padding: 1px;
+    padding: 5px;
     box-sizing:border-box;
     /* stuff */
      width: 30%;
      color:blanchedalmond;
      position:absolute;
-     top: 80%;
+     top: 90%;
      left:25%;
      transform: translate(-50%,-50%);
      text-align:center;
@@ -182,7 +182,7 @@ background-image: linear-gradient(#5c8f78,#5c8f78 );
      width: 30%;
      color:blanchedalmond;
      position:absolute;
-     top: 80%;
+     top: 90%;
      left: 75%;
      transform: translate(-50%,-50%);
      text-align:center;
