@@ -21,6 +21,7 @@
      height: 120vh;
      width: 100%;
      background-image: linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%);
+     background-image: url('images/IMG_6821.jpeg'), linear-gradient(linear-gradient(to right, beige 0%, beige 25%, #ffffff 25%, #ffffff 100%);
      background-position: center;
      background-size: cover;
      position:static;
