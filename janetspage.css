@@ -4,7 +4,7 @@
     padding: 0;
   @font-face {
     font-family: "Stainger Font Family", light-italic;
-    src: url('fonts/Din Studio - Stainger Light Italic.otf) format('opentype');
+    src: url('fonts/Din Studio - Stainger Light Italic.otf') format('opentype');
   }
     font-weight: 400;
     font-style: normal;
@@ -20,7 +20,7 @@
     display: none;
      height: 120vh;
      width: 100%;
-     background-image: linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%)
+     background-image: linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%);
      background-position: center;
      background-size: cover;
      position:static;
