@@ -141,37 +141,8 @@ position: 90%;
 background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614));
 
  }
-/* removing the textboxes */
- /*.text-box1{
-    
- }
- .text-box1 h1{
-     
- }
- .text-box1 p{
-     
- }
- .text-box2{
-   
- }
- .text-box2 h2{
-     
- }
- .text-box2 p{
-    
- }
- .text-box3{
-   
-     /* display: flexbox; */
- }
- .text-box2 h3{
-    
- }
- .text-box3 p{
-   
-     
- } */
 
+ 
 /*small screen*/
  @media(max-width: 700px){
     .text-box1 h1{
