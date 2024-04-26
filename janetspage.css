@@ -20,7 +20,7 @@
     display: none;
      height: 120vh;
      width: 100%;
-     background-image: linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%) url(images/abelespagebackground.jpg);
+     background-image: linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%)
      background-position: center;
      background-size: cover;
      position:static;
