@@ -15,17 +15,20 @@
  #blocking{
     display: none;
  }
+ .commentbox{
+    display: block;
+ }
 
  #header{
-     min-height: 100vh;
+     min-height: 140vh;
      width: 100%;
-     background-image: linear-gradient(beige 25% #ffffff 25%, #ffffff 100%),url(25, 31, 49, 0.614)),url(images/UofI.jpg);
+     background-image: linear-gradient(beige 25% #ffffff 25%, #ffffff 100%), url('25, 31, 49, 0.614.jpg'), url('images/UofI.jpg');
      background-position: center;
      background-size: cover;
      position:static;
-     display: flex;
-     justify-content: space-between;
-     padding-bottom: 100px;
+     /*display: flex;*/
+     /*justify-content: space-between;*/
+    /* padding-bottom: 100px; */
  }
 
 .intro{
@@ -35,7 +38,9 @@
     transform: translateY(100%);
     border-radius: 50%;
     }
-
+.Janet img{
+    width: 300px;
+}
 .aboutme{
     color: black;
     height: 100vh;
@@ -98,3 +103,20 @@
      width: 100%;
  }
 
+ header .logo{
+    font-weight: bold;
+    order: 0;
+    align-content: left;
+    font-size: 30px;
+    padding-left: 100px;
+    color: #fff;
+}
+header .menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-weight: 500;
+}
