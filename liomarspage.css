@@ -338,6 +338,9 @@ header .menu{
     gap: 50px;
     font-weight: 500;
 }
+#blocking{
+    display: none;
+}
 
 
 
