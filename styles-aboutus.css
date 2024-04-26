@@ -225,8 +225,8 @@ header .menu{
     position: absolute;
     inset: auto 10px 10px 10px;
 }
-/* mobile compatibilty (not really needed but is cool) */
-@media screen and (max-width: 600px){
+/* mobile compatibilty */
+@media screen and (max-width: 795px){
     .preview{
         justify-content: start;
     }
@@ -234,6 +234,19 @@ header .menu{
         font-size: 60px;
     }
     .arrows{
-        top: 10%;
+        top: 20%;
+    }
+    header{
+        font-size: 10px;
+    }
+    header .logo{
+        padding-left: 20px;
+        font-size: 30px;
+    }
+    header .menu{
+        gap: 5px;
+    }
+    .menu ul li{
+        margin: 0 5px;
     }
 }
