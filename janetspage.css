@@ -41,6 +41,10 @@
 .Janet img{
     width: 300px;
 }
+.pfp img{
+    border-radius: 100%;
+    width: 200px;
+    padding: 20px;
 .aboutme{
     color: black;
     height: 100vh;
