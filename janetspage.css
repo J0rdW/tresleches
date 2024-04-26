@@ -4,7 +4,9 @@
     padding: 0;
   @font-face {
     font-family: "Stainger Font Family", light-italic;
+
     src: url('fonts/Din Studio - Stainger Light Italic.otf') format('opentype');
+
   }
     font-weight: 400;
     font-style: normal;
@@ -20,6 +22,7 @@
     display: none;
      height: 120vh;
      width: 100%;
+
      background-image: url('images/IMG_6821.jpeg'), linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%);
      background-position: center;
      background-size: cover;
@@ -102,6 +105,7 @@ background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614
    
      
  } */
+
 /*small screen*/
  @media(max-width: 700px){
     .text-box1 h1{
@@ -123,8 +127,9 @@ background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614
         font-size: 15px;
     }
  }
+
  /* image of Abele -- might use this code for myself */ 
-/*
+
  .image{
     box-sizing: border-box;
     border-radius: 0%;
@@ -136,7 +141,9 @@ background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614
     position: absolute;
 
  }
+
 */ 
+
  
 
 /*from styles*/

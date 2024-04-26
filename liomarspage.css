@@ -1,255 +1,348 @@
-* {
-    box-sizing: border-box;
+*{
+    overscroll-behavior: none;
     margin: 0;
     padding: 0;
-    font-family: 'Bakersville', sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overscroll-behavior: none;
+ }
+ #header{
+     height: 15vh;
+     width: 100%;
+     background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
+     background-position: center;
+     background-size: cover;
+     position:static;
+     justify-content: space-between;
+     padding-bottom: 100px;
+ }
+ .intro{
+    color: blanchedalmond;
+    text-align: center;
+    font-size: larger;
+    transform: translateY(100%);
+    border-radius: 50%;
+    
+ }
+ .aboutme{
+    color: blanchedalmond;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 400px;
+    background-image: linear-gradient(rgba(9, 40, 40, 0.7),rgba(9, 40, 40, 0.7)),url(images/lio.png);
+    background-position: center;
+    background-size:cover;
+    position: sticky;
+    justify-content: space-between;
+    
+ }
+ .aboutme h2{
+    color: blanchedalmond;
+    max-height: 50%;
+    font-size: 70px;
+    font-weight: 50;
+    position: sticky;
+    justify-content: space-between;
+ }
+ .aboutme p{
+    color: blanchedalmond;
+    font-size: 20px;
+    font-weight: 50;
+    font-family: "Raleway", sans-serif;
+    transform: translateY(70%);
+    transform: translateX(50%);
+    justify-content: space-between;
+
+    flex-basis: 31%;
+    background:rgba(9, 40, 40, 0.9);
+    border-radius: 0px;
+    margin-bottom: 0%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+ }
+ .navbar{
+     display: flex;
+     padding: 2% 6%;
+     justify-content: space-between;
+     align-items: right;
+ }
+ .nav-links{
+     flex: 1;
+     text-align:end;
+ }
+ .nav-links ul li{
+     list-style: none;
+     display:inline-block;
+     padding: 8px 12px;
+     position: relative;
+ }
+ .nav-links ul li a{
+     color: blanchedalmond;
+     text-decoration: none;
+     font-size: 25px;
+ }
+ .nav-links ul li::after{
+     content: '';
+     width: 0%;
+     height: 2px;
+     background: blanchedalmond;
+     display: block;
+     margin: auto;
+     transition: 0.5s;
+ }
+ .nav-links ul li:hover::after{
+     width: 100%;
+ }
+ 
+ .image{
+    border-radius: 100%;
+    margin-bottom: 5%;
+    width: 18%;
+    max-height: 25%;
+   
+ }
+ 
+
+ /*additional info*/
+
+ #additional{
+    height:auto;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #5c8f78;
+    background-position: center;
+    background-size:auto;
+    position:static;
+    color: blanchedalmond;
+    justify-content: space-between;
+    padding-top: auto;
+ }
+ .additional-row h1{
+    color: blanchedalmond;
+    font-size: 20px;
+    font-weight: 300;
+ }
+ .additional-row p{
+    color: blanchedalmond;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: "Raleway", sans-serif;
+    
+ }
+ .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .additional-row{
+    flex-basis: 31%;
+    background:rgba(9, 40, 40, 0.9);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+ }
+
+.navbar {
+    background: #5c8f78;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position:static;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    height: 50px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;   
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .image{
+        max-width: 15%;
+    }
+    .aboutme{
+        font-size: 15px;
+        height: 150vh;
+    }
+    .aboutme h2{
+        font-size: 40px;
+    }
+    .aboutme p{
+        font-size: 12px;
+        margin-bottom: auto;
+        
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .image{
+        max-width: 15%;
+    }
+    .aboutme{
+        font-size: 15px;
+    }
+    .aboutme h2{
+        font-size: 40px;
+    }
+    .aboutme p{
+        font-size: 11px;
+    }
+}
+
+/*Medium devices (tablets, 768px and up) up*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .image{
+        max-width: 15%;
+    }
+    .aboutme{
+        font-size: 15px;
+    }
+    .aboutme h2{
+        font-size: 45px;
+    }
+    .aboutme p{
+        font-size: 12px;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .image{
+        max-width: 15%;
+    }
+    .aboutme{
+        font-size: 15px;
+    }
+    .aboutme h2{
+        font-size: 50px;
+    }
+    .aboutme p{
+        font-size: 16px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .image{
+        max-width: 15%;
+    }
+    .aboutme{
+        font-size: 15px;
+    }
+    .aboutme h2{
+        font-size: 55px;
+    }
+    .aboutme p{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .preview{
+        justify-content: start;
+    }
+    .slider .list .item .content h2{
+        font-size: 60px;
+    }
+    .arrows{
+        top: 10%;
+    }
 }
 
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/UofI.jpg);
+    background: linear-gradient(rgba(4, 9, 30, 0.5),rgba(4, 9, 30, 0.5));
     background-position: center;
     background-size: cover;
     position: relative;
 }
-/* The "about us" text and title at home */
-.text-box{
-    width: 90%;
-    color: #fff;
+header{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.9), transparent);
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
 }
-.text-box h1{
-    font-size: 60px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 15px;
-}
-/* "About us" hero button (calls to action) */
-.hero-btn{
+/* supposed to be the links at top */
+.menu ul li{
+    list-style: none;
     display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 12px 34px;
-    font-size: 20px;
-    background: transparent;
+    margin: 0 20px;
     position: relative;
 }
-
-/* Signup form */
-.formContainer{
-    width: 100%;
-    min-height: 100vh;
-    background: #292929;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.formContainer h1{
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 40px;
-}
-.signup-box{
-    padding: 35px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 90%;
-    max-width: 800px;
-    background: #fff;
-}
-
-.navbar {
-    background: #131313;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-
-.navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;    
-}
-
-/* since it is an ID, use # instead of .*/
-/* Team name */
-#navbar__logo{
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer; /* hovering */
+.menu ul li a{
     text-decoration: none;
-    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
 }
-
-/* some image before team name (may not need) */
-.fa-gem {
-    margin-right: 0.5rem;
+.menu ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 28px;
+    transition: 0.5s;
 }
-
-.navbar__menu{
-    display: flex;
-    align-items: center;
+.menu ul li:hover::after{
+    width: 100%;
+}
+header .logo{
+    font-weight: bold;
+    order: 0;
+    align-content: left;
+    font-size: 30px;
+    padding-left: 100px;
+    color: #fff;
+}
+header .menu{
+    padding: 0;
+    margin: 0;
     list-style: none;
-    text-align: center;
-}
-
-.navbar__item{
-    height: 80 px;
-}
-
-.navbar__links{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 1rem; /* top bottom, left right */
-    height: 100%;
-    width: 100px;
-}
-
-.navbar__btn{
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    width: 100%
+    gap: 50px;
+    font-weight: 500;
+}
+#blocking{
+    display: none;
+}
+a {
+    color:blanchedalmond;
 }
 
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background: #f77062;
-    color: #fff;
-}
 
-/* color changes when you hover */
-.button:hover{
-    background: #4837ff;
-    transition: all 0.3s ease;
-}
 
-/* color changes when you hover */
-.navbar__links:hover {
-    color: #f77062;
-    transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 960px){
-    .navbar__container {
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0;
-    }
-    .navbar__menu{
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        opacity: 0;
-        transition: all 0.5s ease;
-        height: 50vh;   /* viewport height */
-        z-index: -1;
-        background: #131313;
-    }
-    .navbar__menu.active {/* javascript to trigger */
-        background: #131313;
-        top: 100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 99;
-        height: 50vh;
-        font-size: 1.6rem;
-    }
-    #navbar__logo{
-        padding-left: 25 px;
-    }
-    .navbar__toggle .bar{
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        background: #fff;
-    }
-    .navbar__item{
-        width: 100%;
-    }
-    .navbar__links{
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
-    }
-    #mobile-menu{
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%,20%);
-    }
-    .navbar__btn{
-        padding-bottom: 2rem;
-    }
-
-    .button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-        height: 80px;
-        margin: 0;
-    }
-    .navbar__toggle .bar{
-        display: block;
-        cursor: pointer;
-    }
-    #mobile-menu.is-active .bar:nth-child(2){
-        opacity: 0;
-    }
-    #mobile-menu.is-active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    #mobile-menu.is-active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}

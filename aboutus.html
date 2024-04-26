@@ -1,52 +1,94 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Home - Tres Leches</title>
+  <link rel="stylesheet" href="styles-aboutus.css">
+  <script src="login.js"></script>
+  <script type="module" src="auth.js" defer></script>
 </head>
 
 <body>
   <!-- <h1>Tres Leches</h1> -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="" id="navbar__logo">Home</a>
-      <div class="navbar__toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__item">
-          <a href="index.html" class="navbar__links">
-            Home
-          </a>
-        </li>
-        <li class="navbar__item">
-          <a href="login.html" class="navbar__links">
-            Log In
-          </a>
-        </li>
-        <li class="navbar__btn">
-          <a href="signup.html" class="button">
-            Sign up
-          </a>
-        </li>
+  <header>
+    <div class="logo">Tres Leches</div>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Home</li></a>
+        <li><a href="members.html">Our Team</li></a>
+        <li><a href="login.html" id="login">Log In</li></a>
+        <li><a href="signup.html" id="signup">Sign Up</li></a>
+        <li><a href="#" id="logout">Log Out</li></a>
       </ul>
     </div>
-  </nav>
-  <script src="app.js"></script>
-  <section class="header">
-    <div class="text-box">
-      <h1>Tres(3) Leches' Team Website</h1>
-      <p>A website for the third and final lab of Senior Design and a portfolio for
-        all team members included!
-      </p>
-      <a href="aboutus.html" class="hero-btn">Our Team</a>
+  </header>
+
+  <!-- slider -->
+  <div class="slider">
+    <div class="list">
+      <div class="item active">
+        <img src="images/Rx_Labels.jpg">
+        <div class="content">
+          <p>senior design</p>
+          <h2>Lab 01</h2>
+          <p>
+            Testing text right here
+            seems pretty empty to me :p
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/img2.png">
+        <div class="content">
+          <p>senior design</p>
+          <h2>Lab 02</h2>
+          <p>
+            Testing text right here
+            seems pretty empty to me :p
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/img3.png">
+        <div class="content">
+          <p>senior design</p>
+          <h2>Lab 03</h2>
+          <p>
+            Testing text right here
+            seems pretty empty to me :p
+          </p>
+        </div>
+      </div>
     </div>
-  </section>
+    <!-- button stuff -->
+    <div class="arrows">
+      <button id="prev"><</button>
+      <button id="next">></button>
+    </div>
+    <!-- previews -->
+    <div class="preview">
+      <div class="item active">
+        <img src="images/Rx_Labels.jpg">
+        <div class="content">
+          Lab 01
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/img2.png">
+        <div class="content">
+          Lab 02
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/img3.png">
+        <div class="content">
+          Lab 03
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="aboutus.js"></script>
 </body>
 </html>

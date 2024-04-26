@@ -4,15 +4,41 @@
     padding: 0;
     font-family: 'Bakersville', sans-serif;
 }
-
-.header{
-    min-height: 100vh;
+#logout-message{
+    display: none;
+    background-color: hsl(122, 39%, 49%);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/UofI.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
+    z-index: 2; /* z-index is the z-plane duh*/
 }
+#signup{
+    display: none;
+}
+#login{
+    display: none;
+}
+#logout{
+    display: none;
+}
+
+body{
+    background: url(images/UofI.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+}
+
 /* The "about us" text and title at home */
 .text-box{
     width: 90%;
@@ -30,6 +56,7 @@
     margin: 10px 0 40px;
     font-size: 15px;
 }
+
 /* "About us" hero button (calls to action) */
 .hero-btn{
     display: inline-block;
@@ -40,216 +67,80 @@
     font-size: 20px;
     background: transparent;
     position: relative;
+    margin-right: 15px;
 }
-
-/* Signup form */
-.formContainer{
-    width: 100%;
+.header{
     min-height: 100vh;
-    background: #292929;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(rgba(4, 9, 30, 0.5),rgba(4, 9, 30, 0.5));
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
-.formContainer h1{
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 40px;
-}
-.signup-box{
-    padding: 35px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 90%;
-    max-width: 800px;
-    background: #fff;
-}
-
-.navbar {
-    background: #131313;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
+header{
+    position: absolute;
     top: 0;
-    z-index: 999;
-}
-
-
-.navbar__container {
     display: flex;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.9), transparent);
+    z-index: 100;
     justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;    
-}
-
-/* since it is an ID, use # instead of .*/
-/* Team name */
-#navbar__logo{
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
     align-items: center;
-    cursor: pointer; /* hovering */
-    text-decoration: none;
-    font-size: 2rem;
 }
-
-/* some image before team name (may not need) */
-.fa-gem {
-    margin-right: 0.5rem;
-}
-
-.navbar__menu{
-    display: flex;
-    align-items: center;
+/* supposed to be the links at top */
+.menu ul li{
     list-style: none;
-    text-align: center;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-size: 15px;
 }
-
-.navbar__item{
-    height: 80 px;
-}
-
-.navbar__links{
+.menu ul li a{
+    text-decoration: none;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 1rem; /* top bottom, left right */
-    height: 100%;
-    width: 100px;
+    text-transform: uppercase;
 }
-
-.navbar__btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    width: 100%
+.menu ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 28px;
+    transition: 0.5s;
 }
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    height: 100%;
+.menu ul li:hover::after{
     width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background: #f77062;
+}
+header .logo{
+    font-weight: bold;
+    order: 0;
+    align-content: left;
+    font-size: 30px;
+    padding-left: 100px;
     color: #fff;
 }
-
-/* color changes when you hover */
-.button:hover{
-    background: #4837ff;
-    transition: all 0.3s ease;
+header .menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-weight: 500;
 }
-
-/* color changes when you hover */
-.navbar__links:hover {
-    color: #f77062;
-    transition: all 0.3s ease;
+@media screen and (max-width: 1000px) {
+    .menu ul li {
+        margin: 0 10px;
+        font-size: 11px;
+    }
+    header .logo {
+        font-size: 24px;
+    }
 }
-
-@media screen and (max-width: 960px){
-    .navbar__container {
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0;
-    }
-    .navbar__menu{
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        opacity: 0;
-        transition: all 0.5s ease;
-        height: 50vh;   /* viewport height */
-        z-index: -1;
-        background: #131313;
-    }
-    .navbar__menu.active {/* javascript to trigger */
-        background: #131313;
-        top: 100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 99;
-        height: 50vh;
-        font-size: 1.6rem;
-    }
-    #navbar__logo{
-        padding-left: 25 px;
-    }
-    .navbar__toggle .bar{
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        background: #fff;
-    }
-    .navbar__item{
-        width: 100%;
-    }
-    .navbar__links{
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
-    }
-    #mobile-menu{
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%,20%);
-    }
-    .navbar__btn{
-        padding-bottom: 2rem;
-    }
-
-    .button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-        height: 80px;
-        margin: 0;
-    }
-    .navbar__toggle .bar{
-        display: block;
-        cursor: pointer;
-    }
-    #mobile-menu.is-active .bar:nth-child(2){
-        opacity: 0;
-    }
-    #mobile-menu.is-active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    #mobile-menu.is-active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
+.form-container{
+    display: none;
 }
