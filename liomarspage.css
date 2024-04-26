@@ -2,13 +2,14 @@
     overscroll-behavior: none;
     margin: 0;
     padding: 0;
+    font-family: "Raleway", sans-serif;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
     overscroll-behavior: none;
  }
  #header{
-     height: 27vh;
+     height: 15vh;
      width: 100%;
      background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
      background-position: center;
@@ -52,13 +53,14 @@
     color: blanchedalmond;
     font-size: 20px;
     font-weight: 50;
-    transform: translateY(10%);
+    font-family: "Raleway", sans-serif;
+    transform: translateY(70%);
     transform: translateX(50%);
     justify-content: space-between;
 
     flex-basis: 31%;
     background:rgba(9, 40, 40, 0.9);
-    border-radius: 10px;
+    border-radius: 0px;
     margin-bottom: 0%;
     padding: 20px 12px;
     box-sizing: border-box;
@@ -105,7 +107,7 @@
     margin-bottom: 5%;
     width: 18%;
     max-height: 25%;
-    position: center;
+   
  }
  
 
@@ -136,6 +138,7 @@
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
+    font-family: "Raleway", sans-serif;
     
  }
  .row{
@@ -180,8 +183,26 @@
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
     .image{
-        width: 100px;
-        max-height: 87px;
+        max-width: 15%;
+    }
+    .aboutme{
+        font-size: 15px;
+        height: 150vh;
+    }
+    .aboutme h2{
+        font-size: 40px;
+    }
+    .aboutme p{
+        font-size: 12px;
+        margin-bottom: auto;
+        
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .image{
+        max-width: 15%;
     }
     .aboutme{
         font-size: 15px;
@@ -194,21 +215,11 @@
     }
 }
 
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .aboutme{
-        font-size: 15px;
-    }
-    .aboutme h2{
-        font-size: 40px;
-    }
-    .aboutme p{
-        font-size: 20px;
-    }
-}
-
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
+    .image{
+        max-width: 15%;
+    }
     .aboutme{
         font-size: 15px;
     }
@@ -216,12 +227,15 @@
         font-size: 45px;
     }
     .aboutme p{
-        font-size: 25px;
+        font-size: 12px;
     }
 }
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .image{
+        max-width: 15%;
+    }
     .aboutme{
         font-size: 15px;
     }
@@ -229,12 +243,15 @@
         font-size: 50px;
     }
     .aboutme p{
-        font-size: 30px;
+        font-size: 16px;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+    .image{
+        max-width: 15%;
+    }
     .aboutme{
         font-size: 15px;
     }
@@ -242,7 +259,7 @@
         font-size: 55px;
     }
     .aboutme p{
-        font-size: 35px;
+        font-size: 18px;
     }
 }
 
@@ -257,5 +274,6 @@
         top: 10%;
     }
 }
+
 
 
