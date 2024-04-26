@@ -33,14 +33,38 @@ header{
     z-index: 100;
     justify-content: space-between;
     align-items: center; 
-    
- .navbar{
+}
+.text-box1{
+    text-align: center;
+    color: #fff;
+ }
+ .text-box1 h1{
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+    font-size: 50px;
+ }
+ .text-box2{
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+ }
+ 
+ .text-box2 h2{
+    padding: 20px;
+    font-size: 25px;
+ }
+ .text-box3{
+    text-align: center;
+    color: #fff;
+ } 
+.navbar{
      display: flex;
      padding: 2% 6%;
      justify-content: space-between;
      align-items: center;
         }
-    /* links at the top */
+/* links at the top */
 .menu ul li{
     list-style: none;
     display: inline-block;
