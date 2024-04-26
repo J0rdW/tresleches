@@ -20,8 +20,7 @@
     display: none;
      height: 120vh;
      width: 100%;
-     background-image: linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%);
-     background-image: url('images/IMG_6821.jpeg'), linear-gradient(linear-gradient(to right, beige 0%, beige 25%, #ffffff 25%, #ffffff 100%);
+     background-image: url('images/IMG_6821.jpeg'), linear-gradient(to right, beige 25%, #ffffff, #ffffff 100%);
      background-position: center;
      background-size: cover;
      position:static;
@@ -74,7 +73,7 @@ background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614
 
  }
 /* removing the textboxes */
- .text-box1{
+ /*.text-box1{
     
  }
  .text-box1 h1{
@@ -102,7 +101,7 @@ background-image: linear-gradient(rgba(22, 5, 54, 0.596),rgba(44, 20, 131, 0.614
  .text-box3 p{
    
      
- }
+ } */
 /*small screen*/
  @media(max-width: 700px){
     .text-box1 h1{
