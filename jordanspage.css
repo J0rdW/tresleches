@@ -8,8 +8,17 @@
     overscroll-behavior: none;
     
  }
+ /* change to none to prevent logged out users froms viewing */
+ #blocking{
+    display: none;
+ }
+ .jordan{
+    position: absolute;
+    top: 15%;
+    left: 25%; 
+ }
  #header{
-     height: 50vh;
+     height: 90vh;
      width: 100%;
      background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
      background-position: center;
@@ -19,6 +28,18 @@
      padding-bottom: 100px;
      display: none;
  }
+ header{
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.9), transparent);
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+}
  .text-box1{
     text-align: center;
     color: #fff;
@@ -53,39 +74,49 @@
     width: 200px;
     padding: 20px;
  } 
- 
- .nav-links{
-    height: 60px;
+ /* supposed to be the links at top */
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-size: 15px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.menu ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 28px;
+    transition: 0.5s;
+}
+.menu ul li:hover::after{
+    width: 100%;
+}
+header .logo{
+    font-weight: bold;
+    order: 0;
+    align-content: left;
+    font-size: 30px;
+    padding-left: 100px;
+    color: #fff;
+}
+header .menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
     display: flex;
-    flex: 1;
-    background-color:#5c8f78;
-    justify-content: right;
-    text-align: center;
-    align-items: center;
- }
- .nav-links ul li{
-     list-style: none;
-     display:inline-block;
-     padding: 8px 12px;
-     position: relative;
- }
- .nav-links ul li a{
-     color: blanchedalmond;
-     text-decoration: none;
-     font-size: 15px;
- }
- .nav-links ul li::after{
-     content: '';
-     width: 0%;
-     height: 2px;
-     background: blanchedalmond;
-     display: block;
-     margin: auto;
-     transition: 0.5s;
- }
- .nav-links ul li:hover::after{
-     width: 100%;
- }
+    justify-content: center;
+    gap: 50px;
+    font-weight: 500;
+}
  
  /*additional info*/
  #additional{

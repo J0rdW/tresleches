@@ -11,29 +11,34 @@
   <script type="module" src="auth.js" defer></script>
 </head>
 
-<body>
-  <div class="nav-links">
-    <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="aboutus.html">ABOUT US</a></li>
-      <li><a href="members.html">OUR TEAM</a></li>
-      <li><a href="login.html">LOG OUT</a></li>
-    </ul>
-  </div>
+<body id="blocking">
+  <header>
+    <div class="logo">Tres Leches</div>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Home</li></a>
+        <li><a href="members.html">Our Team</li></a>
+        <li><a href="#" id="logout">Log Out</li></a>
+      </ul>
+    </div>
+  </header>
   <!--from about us-->
   <div class="header" id="header">
-    <div class="pfp">
-      <img class="image" src="images/jordan.png">
-    </div>
-    <div>
-      <div class="text-box1">
-        <h1>Jordan Wong</h1>
-        <p></p>
+    <div class="jordan">
+      <div class="pfp">
+        <img class="image" src="images/jordan.png">
+      </div>
+      <div>
+        <div class="text-box1">
+          <h1>Jordan Wong</h1>
+          <p></p>
+        </div>
       </div>
 
       <div class="text-box2">
         <h2>About Me</h2>
-        <p> I am currently majoring in Electrical Engineering at the University of Iowa with an interest in analog circuit design.
+        <p> I am currently majoring in Electrical Engineering at the University of Iowa with an interest in analog
+          circuit design.
         </p>
       </div>
 
@@ -44,29 +49,10 @@
     </div>
   </div>
   <!--Additional information-->
+  <div class="commentbox"></div>
+  <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+  <script>commentBox('5726733122666496-proj')</script>
 
-  <div class="additional" id="additional">
-    <h1>lorem ipsum</h1>
-    <p>lorem ipsum</p>
-    <div class="row">
-      <div class="additional-row">
-        <h3>lorem ipsum</h3>
-        <p>lorem ipsum<br>&</br>video games</p>
-      </div>
-      <div class="additional-row">
-        <h3>lorem ipsum</h3>
-        <p>lorem ipsum<br>&</br>lorem ipsum</p>
-      </div>
-      <div class="additional-row">
-        <h3>lorem ipsum</h3>
-        <p>lorem ipsum<br>&</br> lorem ipsum</p>
-      </div>
-
-    </div>
-    <div class="commentbox"></div>
-    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-    <script>commentBox('5726733122666496-proj')</script>
-  </div>
 </body>
 
 </html>

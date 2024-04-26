@@ -61,13 +61,11 @@ auth.onAuthStateChanged(function (user) {
     var profiles = ['/tresleches/liomarspage.html', '/tresleches/abelespage.html', '/tresleches/janetspage.html', '/tresleches/jordanspage.html'];
     var protectedProfile = profiles.includes(window.location.pathname);
     if (!user && protectedProfile) {
-        document.getElementById("header").style.display = "none";
-        document.getElementById("additional").style.display = "none";
+        document.getElementById("blocking").style.display = "none";
         alert('You must log in to view this page!')
         window.location.replace("/tresleches/login.html");
     } else {
-        document.getElementById("header").style.display = "block";
-        document.getElementById("additional").style.display = "block";
+        document.getElementById("blocking").style.display = "block";
     }
 });
 

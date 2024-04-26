@@ -10,6 +10,9 @@
  .commentbox{
     display: block;
  }
+ #blocking{
+    display: none;
+ }
  #header{
     display: none;
      height: 120vh;
