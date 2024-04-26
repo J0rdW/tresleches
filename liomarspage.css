@@ -360,12 +360,13 @@ a {
     .menu ul li {
         margin: 0 10px;
         font-size: 11px;
-        transform: translateY(40%);
+        /*transform: translateY(40%);*/
     }
     header .logo {
-        text-align: left;
+        text-align:left;
+        transform: translateX(-20%);
         font-size: 16px;
-        transform: translateY(40%);
+        /*transform: translateY(40%);*/
     }
 }
 .form-container{
