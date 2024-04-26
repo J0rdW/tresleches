@@ -2,13 +2,14 @@
     overscroll-behavior: none;
     margin: 0;
     padding: 0;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bakersville', sans-serif;
     font-weight: 400;
     font-style: normal;
     overscroll-behavior: none;
+    
  }
  #header{
-     height: 27vh;
+     height: 50vh;
      width: 100%;
      background-image: linear-gradient(rgba(25, 31, 49, 0.614),rgba(25, 31, 49, 0.614)),url(images/UofI.jpg);
      background-position: center;
@@ -16,57 +17,52 @@
      position:static;
      justify-content: space-between;
      padding-bottom: 100px;
+     display: none;
  }
- .intro{
-    color: blanchedalmond;
+ .text-box1{
     text-align: center;
-    font-size: larger;
-    transform: translateY(100%);
-    border-radius: 50%;
-    
+    color: #fff;
  }
- .aboutme{
-    color: blanchedalmond;
-    height: 100vh;
-    width: 100%;
-    margin: auto;
+ .text-box1 h1{
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 100vh;
-    background-image: linear-gradient(rgba(9, 40, 40, 0.7),rgba(9, 40, 40, 0.7)),url(images/lio.png);
-    background-position: center;
-    background-size:cover;
-    position: sticky;
-    justify-content: space-between;
-    
+    color: #fff;
+    padding: 30px;
+    font-size: 50px;
  }
- .aboutme h2{
-    color: blanchedalmond;
-    max-height: 50%;
-    font-size: 70px;
-    font-weight: 50;
-    position: sticky;
-    justify-content: space-between;
+ .text-box2{
+    text-align: center;
+    color: #fff;
+    padding: 30px;
  }
- .aboutme p{
-    color: blanchedalmond;
-    font-size: 20px;
-    font-weight: 50;
-    transform: translateY(10%);
-    transform: translateX(50%);
-    justify-content: space-between;
-
-    flex-basis: 31%;
-    background:rgba(9, 40, 40, 0.9);
-    border-radius: 10px;
-    margin-bottom: 0%;
-    padding: 20px 12px;
-    box-sizing: border-box;
+ 
+ .text-box2 h2{
+    padding: 20px;
+    font-size: 25px;
+ }
+ .text-box3{
+    text-align: center;
+    color: #fff;
+ }
+ .pfp{
+    display: flex; /* Helps center */
+    justify-content: center;
+    align-items: center;
+ }
+ .pfp img{
+    border-radius: 100%;
+    width: 200px;
+    padding: 20px;
+ } 
+ 
+ .nav-links{
+    height: 60px;
+    display: flex;
+    flex: 1;
+    background-color:#5c8f78;
+    justify-content: right;
     text-align: center;
     align-items: center;
-    width: 50%;
  }
-
  .nav-links ul li{
      list-style: none;
      display:inline-block;
@@ -76,7 +72,7 @@
  .nav-links ul li a{
      color: blanchedalmond;
      text-decoration: none;
-     font-size: 25px;
+     font-size: 15px;
  }
  .nav-links ul li::after{
      content: '';
@@ -91,17 +87,7 @@
      width: 100%;
  }
  
- .image{
-    border-radius: 100%;
-    margin-bottom: 5%;
-    width: 18%;
-    max-height: 25%;
-    position: center;
- }
- 
-
  /*additional info*/
-
  #additional{
     height:auto;
     width: 100%;
@@ -115,6 +101,7 @@
     color: blanchedalmond;
     justify-content: space-between;
     padding-top: auto;
+    display: none;
  }
  .additional-row h1{
     color: blanchedalmond;
@@ -143,42 +130,6 @@
     padding: 20px 12px;
     box-sizing: border-box;
  }
-
- /* this is all for the navbar on top*/
- .nav-links{
-    height: 60px;
-    display: flex;
-    flex: 1;
-    background-color:#5c8f78;
-    justify-content: right;
-    text-align: center;
-    align-items: center;
- }
- .nav-links ul li{
-     list-style: none;
-     display:inline-block;
-     padding: 8px 12px;
-     position: relative;
- }
- .nav-links ul li a{
-     color: blanchedalmond;
-     text-decoration: none;
-     font-size: 25px;
- }
- .nav-links ul li::after{
-     content: '';
-     width: 0%;
-     height: 2px;
-     background: blanchedalmond;
-     display: block;
-     margin: auto;
-     transition: 0.5s;
- }
- .nav-links ul li:hover::after{
-     width: 100%;
- }
-/* just change background color to your preference but keep it like this */
-
 
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
